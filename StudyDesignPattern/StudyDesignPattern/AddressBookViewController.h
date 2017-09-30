@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  AddressBookViewController.h
 //  StudyDesignPattern
 //
 //  Created by cjyang on 2017. 9. 30..
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface AddressBookViewController : UIViewController
 
 
 @end

@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		2D95D9061F7FDD2B0011D7AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D9051F7FDD2B0011D7AB /* main.m */; };
 		2D95D9091F7FDD2B0011D7AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D9081F7FDD2B0011D7AB /* AppDelegate.m */; };
-		2D95D90C1F7FDD2B0011D7AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D90B1F7FDD2B0011D7AB /* ViewController.m */; };
+		2D95D90C1F7FDD2B0011D7AB /* AddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D90B1F7FDD2B0011D7AB /* AddressBookViewController.m */; };
 		2D95D90F1F7FDD2B0011D7AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D95D90D1F7FDD2B0011D7AB /* Main.storyboard */; };
 		2D95D9111F7FDD2B0011D7AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D95D9101F7FDD2B0011D7AB /* Assets.xcassets */; };
 		2D95D9141F7FDD2B0011D7AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D95D9121F7FDD2B0011D7AB /* LaunchScreen.storyboard */; };
+		2D95D91D1F7FDE460011D7AB /* AddressBookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D91C1F7FDE460011D7AB /* AddressBookTableViewCell.m */; };
+		2D95D9201F7FDFB60011D7AB /* AddressBookItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D91F1F7FDFB60011D7AB /* AddressBookItem.m */; };
+		2D95D9231F7FE57D0011D7AB /* UIView+TUMLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D9221F7FE57D0011D7AB /* UIView+TUMLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +23,18 @@
 		2D95D9051F7FDD2B0011D7AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2D95D9071F7FDD2B0011D7AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2D95D9081F7FDD2B0011D7AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2D95D90A1F7FDD2B0011D7AB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2D95D90B1F7FDD2B0011D7AB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2D95D90A1F7FDD2B0011D7AB /* AddressBookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBookViewController.h; sourceTree = "<group>"; };
+		2D95D90B1F7FDD2B0011D7AB /* AddressBookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookViewController.m; sourceTree = "<group>"; };
 		2D95D90E1F7FDD2B0011D7AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D95D9101F7FDD2B0011D7AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D95D9131F7FDD2B0011D7AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D95D9151F7FDD2B0011D7AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D95D91B1F7FDE460011D7AB /* AddressBookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookTableViewCell.h; sourceTree = "<group>"; };
+		2D95D91C1F7FDE460011D7AB /* AddressBookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookTableViewCell.m; sourceTree = "<group>"; };
+		2D95D91E1F7FDFB60011D7AB /* AddressBookItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookItem.h; sourceTree = "<group>"; };
+		2D95D91F1F7FDFB60011D7AB /* AddressBookItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookItem.m; sourceTree = "<group>"; };
+		2D95D9211F7FE57D0011D7AB /* UIView+TUMLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TUMLayout.h"; sourceTree = "<group>"; };
+		2D95D9221F7FE57D0011D7AB /* UIView+TUMLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TUMLayout.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +69,14 @@
 			children = (
 				2D95D9071F7FDD2B0011D7AB /* AppDelegate.h */,
 				2D95D9081F7FDD2B0011D7AB /* AppDelegate.m */,
-				2D95D90A1F7FDD2B0011D7AB /* ViewController.h */,
-				2D95D90B1F7FDD2B0011D7AB /* ViewController.m */,
+				2D95D90A1F7FDD2B0011D7AB /* AddressBookViewController.h */,
+				2D95D90B1F7FDD2B0011D7AB /* AddressBookViewController.m */,
+				2D95D91B1F7FDE460011D7AB /* AddressBookTableViewCell.h */,
+				2D95D91C1F7FDE460011D7AB /* AddressBookTableViewCell.m */,
+				2D95D91E1F7FDFB60011D7AB /* AddressBookItem.h */,
+				2D95D91F1F7FDFB60011D7AB /* AddressBookItem.m */,
+				2D95D9211F7FE57D0011D7AB /* UIView+TUMLayout.h */,
+				2D95D9221F7FE57D0011D7AB /* UIView+TUMLayout.m */,
 				2D95D90D1F7FDD2B0011D7AB /* Main.storyboard */,
 				2D95D9101F7FDD2B0011D7AB /* Assets.xcassets */,
 				2D95D9121F7FDD2B0011D7AB /* LaunchScreen.storyboard */,
@@ -150,9 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D95D90C1F7FDD2B0011D7AB /* ViewController.m in Sources */,
+				2D95D9201F7FDFB60011D7AB /* AddressBookItem.m in Sources */,
+				2D95D90C1F7FDD2B0011D7AB /* AddressBookViewController.m in Sources */,
+				2D95D91D1F7FDE460011D7AB /* AddressBookTableViewCell.m in Sources */,
 				2D95D9091F7FDD2B0011D7AB /* AppDelegate.m in Sources */,
 				2D95D9061F7FDD2B0011D7AB /* main.m in Sources */,
+				2D95D9231F7FE57D0011D7AB /* UIView+TUMLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
