@@ -97,18 +97,24 @@
 {
     AddressBookItem *item = [self.addressBookItems objectAtIndex:indexPath.row];
     
-    NSString *sNameLabelText = item.name;
-    
-    if([item.phoneNumber length])
-    {
-        sNameLabelText = [sNameLabelText stringByAppendingString:[NSString stringWithFormat:@" (%@)", item.phoneNumber]];
-    }
-    
-    [cell.nameLabel setText:sNameLabelText];
+    [cell.nameLabel setText:[self nameLabelTextFromAddressBookItem:item]];
     [cell.addressLabel setText:item.address];
     [cell.callButton addTarget:self action:@selector(tappedCallButton:) forControlEvents:UIControlEventTouchUpInside];
     [cell.callButton setTag:indexPath.row];
     [cell.callButton setHidden:![item.phoneNumber length]];
+}
+
+
+- (NSString *)nameLabelTextFromAddressBookItem:(AddressBookItem *)item
+{
+    NSString *nameLabelText = item.name;
+    
+    if([item.phoneNumber length])
+    {
+        nameLabelText = [nameLabelText stringByAppendingString:[NSString stringWithFormat:@" (%@)", item.phoneNumber]];
+    }
+    
+    return nameLabelText;
 }
 
 
