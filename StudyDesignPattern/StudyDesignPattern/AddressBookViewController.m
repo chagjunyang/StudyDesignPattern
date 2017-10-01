@@ -66,8 +66,7 @@
     AddressBookItem *item = [AddressBookItem new];
     
     [item initWithJSONObject:@{@"name" : @"김하늘",
-                               @"address" : @"경기도 성남시",
-                               @"phoneNumber" : @"01012341234"
+                               @"address" : @"경기도 성남시"
                                }];
     return item;
 }
@@ -98,11 +97,18 @@
 {
     AddressBookItem *item = [self.addressBookItems objectAtIndex:indexPath.row];
     
-    [cell.nameLabel setText:item.name];
+    NSString *sNameLabelText = item.name;
+    
+    if([item.phoneNumber length])
+    {
+        sNameLabelText = [sNameLabelText stringByAppendingString:[NSString stringWithFormat:@" (%@)", item.phoneNumber]];
+    }
+    
+    [cell.nameLabel setText:sNameLabelText];
     [cell.addressLabel setText:item.address];
-    [cell.phoneNumberLabel setText:item.phoneNumber];
     [cell.callButton addTarget:self action:@selector(tappedCallButton:) forControlEvents:UIControlEventTouchUpInside];
     [cell.callButton setTag:indexPath.row];
+    [cell.callButton setHidden:![item.phoneNumber length]];
 }
 
 

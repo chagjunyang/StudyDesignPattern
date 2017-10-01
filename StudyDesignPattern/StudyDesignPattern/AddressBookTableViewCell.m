@@ -36,7 +36,6 @@ static CGFloat const kCallButtonMarginBottom = 15;
         
         [self setupNameLabel];
         [self setupAddressLabel];
-        [self setupPhoneNumberLabel];
         [self setupCallButton];
     }
     
@@ -48,16 +47,13 @@ static CGFloat const kCallButtonMarginBottom = 15;
 {
     [super layoutSubviews];
     
-    [self.nameLabel TUMSetPosition:CGPointMake(kContentsHorizontalMargin, 20)];
+    [self.nameLabel TUMSetPosition:CGPointMake(kContentsHorizontalMargin, kNameLabelMarginTop)];
     
     [self.addressLabel TUMMoveToBottomOf:self.nameLabel gap:kAddressLabelMarginTop];
     [self.addressLabel TUMSetXPosition:kContentsHorizontalMargin];
     
-    [self.callButton TUMMoveToBottomOf:self.addressLabel gap:kCallButtonMarginTop];
+    [self.callButton TUMSetYPosition:kCallButtonMarginTop];
     [self.callButton TUMMoveToRightWithMargin:kContentsHorizontalMargin];
-
-    [self.phoneNumberLabel TUMSetXPosition:kContentsHorizontalMargin];
-    [UIView TUMAlignViews:@[self.callButton, self.phoneNumberLabel] mode:TUMViewLayoutAlignModeMiddle];
 }
 
 
@@ -65,7 +61,6 @@ static CGFloat const kCallButtonMarginBottom = 15;
 {
     [self.nameLabel sizeToFit];
     [self.addressLabel sizeToFit];
-    [self.phoneNumberLabel sizeToFit];
     [self.callButton TUMSetSize:CGSizeMake(100, 50)];
     
     return CGSizeMake(size.width, [self cellHeight]);
@@ -110,17 +105,6 @@ static CGFloat const kCallButtonMarginBottom = 15;
     [self.addressLabel setTextColor:[UIColor grayColor]];
     
     [[self contentView] addSubview:self.addressLabel];
-}
-
-
-- (void)setupPhoneNumberLabel
-{
-    _phoneNumberLabel = [UILabel new];
-    
-    [self.phoneNumberLabel setFont:[UIFont systemFontOfSize:12]];
-    [self.phoneNumberLabel setTextColor:[UIColor grayColor]];
-    
-    [[self contentView] addSubview:self.phoneNumberLabel];
 }
 
 

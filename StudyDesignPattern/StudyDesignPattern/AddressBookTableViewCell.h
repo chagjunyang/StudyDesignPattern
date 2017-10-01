@@ -14,7 +14,6 @@
 
 @property (strong, nonatomic, readonly) UILabel *nameLabel;
 @property (strong, nonatomic, readonly) UILabel *addressLabel;
-@property (strong, nonatomic, readonly) UILabel *phoneNumberLabel;
 @property (strong, nonatomic, readonly) UIButton *callButton;
 
 
