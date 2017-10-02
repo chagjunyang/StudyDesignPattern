@@ -51,23 +51,19 @@
 
 - (AddressBookItem *)addressBookItem1
 {
-    AddressBookItem *item = [AddressBookItem new];
-    
-    [item initWithJSONObject:@{@"name" : @"홍길동",
-                               @"address" : @"경기도 성남시",
-                               @"phoneNumber" : @"01012341111"
-                               }];
+    AddressBookItem *item = [[AddressBookItem alloc] initWithJSONObject:@{@"name" : @"홍길동",
+                                                                          @"address" : @"경기도 성남시",
+                                                                          @"phoneNumber" : @"01012341111"
+                                                                          }];
     return item;
 }
 
 
 - (AddressBookItem *)addressBookItem2
 {
-    AddressBookItem *item = [AddressBookItem new];
-    
-    [item initWithJSONObject:@{@"name" : @"김하늘",
-                               @"address" : @"경기도 성남시"
-                               }];
+    AddressBookItem *item = [[AddressBookItem alloc] initWithJSONObject:@{@"name" : @"김하늘",
+                                                                          @"address" : @"경기도 성남시"
+                                                                          }];
     return item;
 }
 

@@ -16,7 +16,7 @@
 @property (strong, nonatomic, readonly) NSString *address;
 @property (strong, nonatomic, readonly) NSString *phoneNumber;
 
-- (void)initWithJSONObject:(NSDictionary *)aJSONObject;
+- (instancetype)initWithJSONObject:(NSDictionary *)aJSONObject;
 
 
 @end

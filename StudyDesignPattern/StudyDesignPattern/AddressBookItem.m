@@ -12,11 +12,18 @@
 @implementation AddressBookItem
 
 
-- (void)initWithJSONObject:(NSDictionary *)aJSONObject
+- (instancetype)initWithJSONObject:(NSDictionary *)aJSONObject
 {
-    _name = [aJSONObject objectForKey:@"name"];
-    _address = [aJSONObject objectForKey:@"address"];
-    _phoneNumber = [aJSONObject objectForKey:@"phoneNumber"];
+    self = [super init];
+    
+    if(self)
+    {
+        _name = [aJSONObject objectForKey:@"name"];
+        _address = [aJSONObject objectForKey:@"address"];
+        _phoneNumber = [aJSONObject objectForKey:@"phoneNumber"];
+    }
+    
+    return self;
 }
 
 

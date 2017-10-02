@@ -16,7 +16,19 @@
 		2D95D91D1F7FDE460011D7AB /* AddressBookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D91C1F7FDE460011D7AB /* AddressBookTableViewCell.m */; };
 		2D95D9201F7FDFB60011D7AB /* AddressBookItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D91F1F7FDFB60011D7AB /* AddressBookItem.m */; };
 		2D95D9231F7FE57D0011D7AB /* UIView+TUMLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D9221F7FE57D0011D7AB /* UIView+TUMLayout.m */; };
+		2DE8A7381F80E530004B8D15 /* addressBook.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8A7371F80E530004B8D15 /* addressBook.json */; };
+		2DE8A73D1F80E657004B8D15 /* AddressBookViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8A73C1F80E657004B8D15 /* AddressBookViewControllerTest.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DE8A7311F80E203004B8D15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D95D8F91F7FDD2B0011D7AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D95D9001F7FDD2B0011D7AB;
+			remoteInfo = StudyDesignPattern;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2D95D9011F7FDD2B0011D7AB /* StudyDesignPattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyDesignPattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,10 +47,21 @@
 		2D95D91F1F7FDFB60011D7AB /* AddressBookItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookItem.m; sourceTree = "<group>"; };
 		2D95D9211F7FE57D0011D7AB /* UIView+TUMLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TUMLayout.h"; sourceTree = "<group>"; };
 		2D95D9221F7FE57D0011D7AB /* UIView+TUMLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TUMLayout.m"; sourceTree = "<group>"; };
+		2DE8A72C1F80E203004B8D15 /* StudyDesignPatternTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyDesignPatternTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE8A7301F80E203004B8D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DE8A7371F80E530004B8D15 /* addressBook.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = addressBook.json; sourceTree = "<group>"; };
+		2DE8A73C1F80E657004B8D15 /* AddressBookViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookViewControllerTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2D95D8FE1F7FDD2B0011D7AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DE8A7291F80E203004B8D15 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -52,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				2D95D9031F7FDD2B0011D7AB /* StudyDesignPattern */,
+				2DE8A72D1F80E203004B8D15 /* StudyDesignPatternTests */,
 				2D95D9021F7FDD2B0011D7AB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				2D95D9011F7FDD2B0011D7AB /* StudyDesignPattern.app */,
+				2DE8A72C1F80E203004B8D15 /* StudyDesignPatternTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +119,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2DE8A72D1F80E203004B8D15 /* StudyDesignPatternTests */ = {
+			isa = PBXGroup;
+			children = (
+				2DE8A7361F80E516004B8D15 /* JSON */,
+				2DE8A7301F80E203004B8D15 /* Info.plist */,
+				2DE8A73C1F80E657004B8D15 /* AddressBookViewControllerTest.m */,
+			);
+			path = StudyDesignPatternTests;
+			sourceTree = "<group>";
+		};
+		2DE8A7361F80E516004B8D15 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				2DE8A7371F80E530004B8D15 /* addressBook.json */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,6 +157,24 @@
 			productReference = 2D95D9011F7FDD2B0011D7AB /* StudyDesignPattern.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2DE8A72B1F80E203004B8D15 /* StudyDesignPatternTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DE8A7351F80E203004B8D15 /* Build configuration list for PBXNativeTarget "StudyDesignPatternTests" */;
+			buildPhases = (
+				2DE8A7281F80E203004B8D15 /* Sources */,
+				2DE8A7291F80E203004B8D15 /* Frameworks */,
+				2DE8A72A1F80E203004B8D15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DE8A7321F80E203004B8D15 /* PBXTargetDependency */,
+			);
+			name = StudyDesignPatternTests;
+			productName = StudyDesignPatternTests;
+			productReference = 2DE8A72C1F80E203004B8D15 /* StudyDesignPatternTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -126,6 +187,11 @@
 					2D95D9001F7FDD2B0011D7AB = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
+					};
+					2DE8A72B1F80E203004B8D15 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2D95D9001F7FDD2B0011D7AB;
 					};
 				};
 			};
@@ -143,6 +209,7 @@
 			projectRoot = "";
 			targets = (
 				2D95D9001F7FDD2B0011D7AB /* StudyDesignPattern */,
+				2DE8A72B1F80E203004B8D15 /* StudyDesignPatternTests */,
 			);
 		};
 /* End PBXProject section */
@@ -155,6 +222,14 @@
 				2D95D9141F7FDD2B0011D7AB /* LaunchScreen.storyboard in Resources */,
 				2D95D9111F7FDD2B0011D7AB /* Assets.xcassets in Resources */,
 				2D95D90F1F7FDD2B0011D7AB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DE8A72A1F80E203004B8D15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DE8A7381F80E530004B8D15 /* addressBook.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +249,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2DE8A7281F80E203004B8D15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DE8A73D1F80E657004B8D15 /* AddressBookViewControllerTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DE8A7321F80E203004B8D15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D95D9001F7FDD2B0011D7AB /* StudyDesignPattern */;
+			targetProxy = 2DE8A7311F80E203004B8D15 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2D95D90D1F7FDD2B0011D7AB /* Main.storyboard */ = {
@@ -310,6 +401,30 @@
 			};
 			name = Release;
 		};
+		2DE8A7331F80E203004B8D15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = StudyDesignPatternTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nhnent.StudyDesignPatternTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StudyDesignPattern.app/StudyDesignPattern";
+			};
+			name = Debug;
+		};
+		2DE8A7341F80E203004B8D15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = StudyDesignPatternTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nhnent.StudyDesignPatternTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StudyDesignPattern.app/StudyDesignPattern";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -329,6 +444,16 @@
 				2D95D91A1F7FDD2B0011D7AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DE8A7351F80E203004B8D15 /* Build configuration list for PBXNativeTarget "StudyDesignPatternTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DE8A7331F80E203004B8D15 /* Debug */,
+				2DE8A7341F80E203004B8D15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
