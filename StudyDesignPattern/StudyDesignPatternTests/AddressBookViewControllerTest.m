@@ -85,9 +85,8 @@
 }
 
 
-- (void)testExample
+- (void)nameDataTest
 {
-    //1. 이름 + 전화번호
     AddressBookItem *includedPhoneNumberItem = [self.addressBookViewController.addressBookItems objectAtIndex:0];
     AddressBookItem *notIncludedPhoneNumberItem = [self.addressBookViewController.addressBookItems objectAtIndex:1];
     
@@ -96,8 +95,19 @@
     
     XCTAssertTrue([includedPhoneNumberNameLabelText isEqualToString:@"홍길동 (01012341111)"]);
     XCTAssertTrue([notIncludedPhoneNumberNameLabelText isEqualToString:@"김하늘"]);
+}
+
+
+- (void)buttonStateTest
+{
+    AddressBookTableViewCell *includedPhoneNumberCell = [AddressBookTableViewCell new];
+    AddressBookTableViewCell *notIncludedPhoneNumberCell = [AddressBookTableViewCell new];
     
-    //2. 전화걸기 버튼 노출여부
+    [self.addressBookViewController bindAddressBookItemToCell:includedPhoneNumberCell atIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    [self.addressBookViewController bindAddressBookItemToCell:notIncludedPhoneNumberCell atIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    
+    XCTAssertFalse([includedPhoneNumberCell.callButton isHidden]);
+    XCTAssertTrue([includedPhoneNumberCell.callButton isHidden]);
 }
 
 
