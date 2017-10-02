@@ -13,6 +13,7 @@
 
 @interface AddressBookViewController () <UITableViewDelegate, UITableViewDataSource>
 
+
 @property (strong, nonatomic, readonly) UITableView *tableView;
 @property (strong, nonatomic, readonly) NSArray <AddressBookItem *> *addressBookItems;
 
@@ -40,31 +41,24 @@
 
 - (void)fetchAddressItemsWithCompletionBlock:(dispatch_block_t)aCompletion
 {
-    NSMutableArray *mutableAddressBookItems = [NSMutableArray new];
+    NSMutableArray<AddressBookItem *> *addressBookItems = [NSMutableArray new];
+    NSArray<NSDictionary *> *addressBookJSONArray = [self objectForJSONFileName:@"addressBook"];
     
-    [mutableAddressBookItems addObject:[self addressBookItem1]];
-    [mutableAddressBookItems addObject:[self addressBookItem2]];
+    for(NSDictionary *addressBookJSONDict in addressBookJSONArray)
+    {
+        [addressBookItems addObject:[[AddressBookItem alloc] initWithJSONObject:addressBookJSONDict]];
+    }
     
-    _addressBookItems = [NSArray arrayWithArray:mutableAddressBookItems];
+    _addressBookItems = [NSArray arrayWithArray:addressBookItems];
 }
 
 
-- (AddressBookItem *)addressBookItem1
+- (id)objectForJSONFileName:(NSString *)aFileName
 {
-    AddressBookItem *item = [[AddressBookItem alloc] initWithJSONObject:@{@"name" : @"홍길동",
-                                                                          @"address" : @"경기도 성남시",
-                                                                          @"phoneNumber" : @"01012341111"
-                                                                          }];
-    return item;
-}
-
-
-- (AddressBookItem *)addressBookItem2
-{
-    AddressBookItem *item = [[AddressBookItem alloc] initWithJSONObject:@{@"name" : @"김하늘",
-                                                                          @"address" : @"경기도 성남시"
-                                                                          }];
-    return item;
+    NSString *sPath = [[NSBundle mainBundle] pathForResource:aFileName ofType:@"json"];
+    NSData   *sData = [NSData dataWithContentsOfFile:sPath];
+    
+    return [NSJSONSerialization JSONObjectWithData:sData options:kNilOptions error:nil];
 }
 
 

@@ -16,6 +16,7 @@
 		2D95D91D1F7FDE460011D7AB /* AddressBookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D91C1F7FDE460011D7AB /* AddressBookTableViewCell.m */; };
 		2D95D9201F7FDFB60011D7AB /* AddressBookItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D91F1F7FDFB60011D7AB /* AddressBookItem.m */; };
 		2D95D9231F7FE57D0011D7AB /* UIView+TUMLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D9221F7FE57D0011D7AB /* UIView+TUMLayout.m */; };
+		2DD6C0BE1F8298CF002443C6 /* addressBook.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8A7371F80E530004B8D15 /* addressBook.json */; };
 		2DE8A7381F80E530004B8D15 /* addressBook.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8A7371F80E530004B8D15 /* addressBook.json */; };
 		2DE8A73D1F80E657004B8D15 /* AddressBookViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8A73C1F80E657004B8D15 /* AddressBookViewControllerTest.m */; };
 /* End PBXBuildFile section */
@@ -219,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD6C0BE1F8298CF002443C6 /* addressBook.json in Resources */,
 				2D95D9141F7FDD2B0011D7AB /* LaunchScreen.storyboard in Resources */,
 				2D95D9111F7FDD2B0011D7AB /* Assets.xcassets in Resources */,
 				2D95D90F1F7FDD2B0011D7AB /* Main.storyboard in Resources */,
