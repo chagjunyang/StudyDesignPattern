@@ -8,14 +8,16 @@
 
 #import "AddressBookTableViewCell.h"
 
+#import "AddressBookItem.h"
+
 #import "UIView+TUMLayout.h"
 
 
 static CGFloat const kContentsHorizontalMargin = 15;
 static CGFloat const kNameLabelMarginTop = 10;
 static CGFloat const kAddressLabelMarginTop = 15;
+static CGFloat const kAddressLabelMarginBottom = 15;
 static CGFloat const kCallButtonMarginTop = 10;
-static CGFloat const kCallButtonMarginBottom = 15;
 
 
 @interface AddressBookTableViewCell()
@@ -75,11 +77,49 @@ static CGFloat const kCallButtonMarginBottom = 15;
     sCellHeight += CGRectGetHeight(self.nameLabel.bounds);
     sCellHeight += kAddressLabelMarginTop;
     sCellHeight += CGRectGetHeight(self.addressLabel.bounds);
-    sCellHeight += kCallButtonMarginTop;
-    sCellHeight += CGRectGetHeight(self.callButton.bounds);
-    sCellHeight += kCallButtonMarginBottom;
+    sCellHeight += kAddressLabelMarginBottom;
     
     return sCellHeight;
+}
+
+
+#pragma mark - Public
+
+
+- (void)updateCellWithAddressBookItem:(AddressBookItem *)aItem
+{
+    [self.nameLabel setText:[self nameLabelTextFromAddressBookItem:aItem]];
+    [self.addressLabel setText:aItem.address];
+    [self.callButton addTarget:self action:@selector(tappedCallButton:) forControlEvents:UIControlEventTouchUpInside];
+    [self.callButton setHidden:![aItem.phoneNumber length]];
+}
+
+
+#pragma mark - Private
+
+
+- (NSString *)nameLabelTextFromAddressBookItem:(AddressBookItem *)item
+{
+    NSString *nameLabelText = item.name;
+    
+    if([item.phoneNumber length])
+    {
+        nameLabelText = [nameLabelText stringByAppendingString:[NSString stringWithFormat:@" (%@)", item.phoneNumber]];
+    }
+    
+    return nameLabelText;
+}
+
+
+#pragma mark - Action
+
+
+- (void)tappedCallButton:(id)aSender
+{
+    if([self.delegate respondsToSelector:@selector(tappedCallButtonAtAddressBookItemCell:)])
+    {
+        [self.delegate tappedCallButtonAtAddressBookItemCell:self];
+    }
 }
 
 
@@ -116,6 +156,7 @@ static CGFloat const kCallButtonMarginBottom = 15;
     [self.callButton setTitle:@"전화걸기" forState:UIControlStateNormal];
     [self.callButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.callButton setBackgroundColor:[UIColor greenColor]];
+    [self.callButton addTarget:self action:@selector(tappedCallButton:) forControlEvents:UIControlEventTouchUpInside];
     
     [[self contentView] addSubview:self.callButton];
 }

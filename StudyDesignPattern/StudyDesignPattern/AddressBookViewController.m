@@ -11,7 +11,7 @@
 #import "AddressBookTableViewCell.h"
 
 
-@interface AddressBookViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface AddressBookViewController () <UITableViewDelegate, UITableViewDataSource, AddressBookTableViewCellDelegate>
 
 
 @property (strong, nonatomic, readonly) UITableView *tableView;
@@ -86,40 +86,10 @@
 - (void)bindAddressBookItemToCell:(AddressBookTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     AddressBookItem *item = [self.addressBookItems objectAtIndex:indexPath.row];
-    
-    [cell.nameLabel setText:[self nameLabelTextFromAddressBookItem:item]];
-    [cell.addressLabel setText:item.address];
-    [cell.callButton addTarget:self action:@selector(tappedCallButton:) forControlEvents:UIControlEventTouchUpInside];
+
+    [cell updateCellWithAddressBookItem:item];
     [cell.callButton setTag:indexPath.row];
-    [cell.callButton setHidden:![item.phoneNumber length]];
-}
-
-
-- (NSString *)nameLabelTextFromAddressBookItem:(AddressBookItem *)item
-{
-    NSString *nameLabelText = item.name;
-    
-    if([item.phoneNumber length])
-    {
-        nameLabelText = [nameLabelText stringByAppendingString:[NSString stringWithFormat:@" (%@)", item.phoneNumber]];
-    }
-    
-    return nameLabelText;
-}
-
-
-- (void)tappedCallButton:(UIButton *)aSender
-{
-    AddressBookItem *item = [self.addressBookItems objectAtIndex:aSender.tag];
-
-    NSURL *phoneUrl = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt:%@", item.phoneNumber]];
-    
-    [[UIApplication sharedApplication] openURL:phoneUrl options:@{} completionHandler:^(BOOL success) {
-        if(!success)
-        {
-            //showAlert
-        }
-    }];
+    [cell setDelegate:self];
 }
 
 
@@ -158,6 +128,24 @@
     [self bindAddressBookItemToCell:sCell atIndexPath:indexPath];
     
     return [sCell sizeThatFits:tableView.bounds.size].height;
+}
+
+
+#pragma mark - AddressBookTableViewCellDelegate
+
+
+- (void)tappedCallButtonAtAddressBookItemCell:(AddressBookTableViewCell *)aCell
+{
+    AddressBookItem *item = [self.addressBookItems objectAtIndex:aCell.tag];
+    
+    NSURL *phoneUrl = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt:%@", item.phoneNumber]];
+    
+    [[UIApplication sharedApplication] openURL:phoneUrl options:@{} completionHandler:^(BOOL success) {
+        if(!success)
+        {
+            //showAlert
+        }
+    }];
 }
 
 
