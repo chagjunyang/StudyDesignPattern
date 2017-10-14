@@ -8,7 +8,7 @@
 
 #import "AddressBookTableViewCell.h"
 
-#import "AddressBookItem.h"
+#import "AddressBookItemServiceModel.h"
 
 #import "UIView+TUMLayout.h"
 
@@ -86,28 +86,12 @@ static CGFloat const kCallButtonMarginTop = 10;
 #pragma mark - Public
 
 
-- (void)updateCellWithAddressBookItem:(AddressBookItem *)aItem
+- (void)updateCellWithViewModel:(AddressBookItemServiceModel *)aViewModel
 {
-    [self.nameLabel setText:[self nameLabelTextFromAddressBookItem:aItem]];
-    [self.addressLabel setText:aItem.address];
+    [self.nameLabel setText:aViewModel.name];
+    [self.addressLabel setText:aViewModel.address];
     [self.callButton addTarget:self action:@selector(tappedCallButton:) forControlEvents:UIControlEventTouchUpInside];
-    [self.callButton setHidden:![aItem.phoneNumber length]];
-}
-
-
-#pragma mark - Private
-
-
-- (NSString *)nameLabelTextFromAddressBookItem:(AddressBookItem *)item
-{
-    NSString *nameLabelText = item.name;
-    
-    if([item.phoneNumber length])
-    {
-        nameLabelText = [nameLabelText stringByAppendingString:[NSString stringWithFormat:@" (%@)", item.phoneNumber]];
-    }
-    
-    return nameLabelText;
+    [self.callButton setHidden:[aViewModel callButtonHidden]];
 }
 
 

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class AddressBookItem;
+@class AddressBookItemServiceModel;
 
 @protocol AddressBookTableViewCellDelegate;
 
@@ -21,7 +21,7 @@
 @property (strong, nonatomic, readonly) UILabel *addressLabel;
 @property (strong, nonatomic, readonly) UIButton *callButton;
 
-- (void)updateCellWithAddressBookItem:(AddressBookItem *)aItem;
+- (void)updateCellWithViewModel:(AddressBookItemServiceModel *)aViewModel;
 
 
 @end

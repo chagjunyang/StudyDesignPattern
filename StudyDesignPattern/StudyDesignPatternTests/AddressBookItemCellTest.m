@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 
-#import "AddressBookTableViewCell.h"
+#import "AddressBookItemServiceModel.h"
 #import "AddressBookItem.h"
 
 
@@ -35,17 +35,14 @@
     AddressBookItem *includedPhoneNumberItem = [self.addressBookItems objectAtIndex:0];
     AddressBookItem *notIncludedPhoneNumberItem = [self.addressBookItems objectAtIndex:1];
     
-    AddressBookTableViewCell *includedPhoneNumberItemCell = [AddressBookTableViewCell new];
-    AddressBookTableViewCell *notIncludedPhoneNumberItemCell = [AddressBookTableViewCell new];
+    AddressBookItemServiceModel *includedPhoneNumberCellViewModel = [AddressBookItemServiceModel new];
+    AddressBookItemServiceModel *notIncludedPhoneNumberCellViewModel = [AddressBookItemServiceModel new];
     
-    [includedPhoneNumberItemCell updateCellWithAddressBookItem:includedPhoneNumberItem];
-    [notIncludedPhoneNumberItemCell updateCellWithAddressBookItem:notIncludedPhoneNumberItem];
+    [includedPhoneNumberCellViewModel injectValueObject:includedPhoneNumberItem];
+    [notIncludedPhoneNumberCellViewModel injectValueObject:notIncludedPhoneNumberItem];
     
-    NSString *includedPhoneNumberNameLabelText = [includedPhoneNumberItemCell.nameLabel text];
-    NSString *notIncludedPhoneNumberNameLabelText = [notIncludedPhoneNumberItemCell.nameLabel text];
-    
-    XCTAssertTrue([includedPhoneNumberNameLabelText isEqualToString:@"홍길동 (01012341111)"]);
-    XCTAssertTrue([notIncludedPhoneNumberNameLabelText isEqualToString:@"김하늘"]);
+    XCTAssertTrue([includedPhoneNumberCellViewModel.name isEqualToString:@"홍길동 (01012341111)"]);
+    XCTAssertTrue([notIncludedPhoneNumberCellViewModel.name isEqualToString:@"김하늘"]);
 }
 
 
@@ -54,14 +51,14 @@
     AddressBookItem *includedPhoneNumberItem = [self.addressBookItems objectAtIndex:0];
     AddressBookItem *notIncludedPhoneNumberItem = [self.addressBookItems objectAtIndex:1];
     
-    AddressBookTableViewCell *includedPhoneNumberItemCell = [AddressBookTableViewCell new];
-    AddressBookTableViewCell *notIncludedPhoneNumberItemCell = [AddressBookTableViewCell new];
+    AddressBookItemServiceModel *includedPhoneNumberCellViewModel = [AddressBookItemServiceModel new];
+    AddressBookItemServiceModel *notIncludedPhoneNumberCellViewModel = [AddressBookItemServiceModel new];
     
-    [includedPhoneNumberItemCell updateCellWithAddressBookItem:includedPhoneNumberItem];
-    [notIncludedPhoneNumberItemCell updateCellWithAddressBookItem:notIncludedPhoneNumberItem];
+    [includedPhoneNumberCellViewModel injectValueObject:includedPhoneNumberItem];
+    [notIncludedPhoneNumberCellViewModel injectValueObject:notIncludedPhoneNumberItem];
     
-    XCTAssertFalse([includedPhoneNumberItemCell.callButton isHidden]);
-    XCTAssertTrue([notIncludedPhoneNumberItemCell.callButton isHidden]);
+    XCTAssertFalse(includedPhoneNumberCellViewModel.callButtonHidden);
+    XCTAssertTrue(notIncludedPhoneNumberCellViewModel.callButtonHidden);
 }
 
 

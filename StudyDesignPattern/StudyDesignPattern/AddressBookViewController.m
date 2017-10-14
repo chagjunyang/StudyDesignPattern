@@ -9,6 +9,7 @@
 #import "AddressBookViewController.h"
 #import "AddressBookItem.h"
 #import "AddressBookTableViewCell.h"
+#import "AddressBookItemServiceModel.h"
 
 
 @interface AddressBookViewController () <UITableViewDelegate, UITableViewDataSource, AddressBookTableViewCellDelegate>
@@ -86,8 +87,10 @@
 - (void)bindAddressBookItemToCell:(AddressBookTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     AddressBookItem *item = [self.addressBookItems objectAtIndex:indexPath.row];
-
-    [cell updateCellWithAddressBookItem:item];
+    AddressBookItemServiceModel *viewModel = [AddressBookItemServiceModel new];
+    [viewModel injectValueObject:item];
+    
+    [cell updateCellWithViewModel:viewModel];
     [cell.callButton setTag:indexPath.row];
     [cell setDelegate:self];
 }

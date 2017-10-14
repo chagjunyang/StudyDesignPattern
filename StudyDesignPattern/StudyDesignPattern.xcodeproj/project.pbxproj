@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D16894B1F921C6200D71586 /* AddressBookItemServiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D16894A1F921C6200D71586 /* AddressBookItemServiceModel.m */; };
 		2D8C39391F8BD59C0007924A /* AddressBookItemCellTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C39381F8BD59C0007924A /* AddressBookItemCellTest.m */; };
 		2D95D9061F7FDD2B0011D7AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D9051F7FDD2B0011D7AB /* main.m */; };
 		2D95D9091F7FDD2B0011D7AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D9081F7FDD2B0011D7AB /* AppDelegate.m */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D1689491F921C6200D71586 /* AddressBookItemServiceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookItemServiceModel.h; sourceTree = "<group>"; };
+		2D16894A1F921C6200D71586 /* AddressBookItemServiceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookItemServiceModel.m; sourceTree = "<group>"; };
 		2D8C39381F8BD59C0007924A /* AddressBookItemCellTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookItemCellTest.m; sourceTree = "<group>"; };
 		2D95D9011F7FDD2B0011D7AB /* StudyDesignPattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyDesignPattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D95D9051F7FDD2B0011D7AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,6 +102,8 @@
 				2D95D90B1F7FDD2B0011D7AB /* AddressBookViewController.m */,
 				2D95D91B1F7FDE460011D7AB /* AddressBookTableViewCell.h */,
 				2D95D91C1F7FDE460011D7AB /* AddressBookTableViewCell.m */,
+				2D1689491F921C6200D71586 /* AddressBookItemServiceModel.h */,
+				2D16894A1F921C6200D71586 /* AddressBookItemServiceModel.m */,
 				2D95D91E1F7FDFB60011D7AB /* AddressBookItem.h */,
 				2D95D91F1F7FDFB60011D7AB /* AddressBookItem.m */,
 				2D95D9211F7FE57D0011D7AB /* UIView+TUMLayout.h */,
@@ -245,6 +250,7 @@
 				2D95D9201F7FDFB60011D7AB /* AddressBookItem.m in Sources */,
 				2D95D90C1F7FDD2B0011D7AB /* AddressBookViewController.m in Sources */,
 				2D95D91D1F7FDE460011D7AB /* AddressBookTableViewCell.m in Sources */,
+				2D16894B1F921C6200D71586 /* AddressBookItemServiceModel.m in Sources */,
 				2D95D9091F7FDD2B0011D7AB /* AppDelegate.m in Sources */,
 				2D95D9061F7FDD2B0011D7AB /* main.m in Sources */,
 				2D95D9231F7FE57D0011D7AB /* UIView+TUMLayout.m in Sources */,
