@@ -43,22 +43,9 @@
     
     XCTAssertTrue([includedPhoneNumberCellViewModel.name isEqualToString:@"홍길동 (01012341111)"]);
     XCTAssertTrue([notIncludedPhoneNumberCellViewModel.name isEqualToString:@"김하늘"]);
-}
-
-
-- (void)testButtonState
-{
-    AddressBookItem *includedPhoneNumberItem = [self.addressBookItems objectAtIndex:0];
-    AddressBookItem *notIncludedPhoneNumberItem = [self.addressBookItems objectAtIndex:1];
-    
-    AddressBookItemServiceModel *includedPhoneNumberCellViewModel = [AddressBookItemServiceModel new];
-    AddressBookItemServiceModel *notIncludedPhoneNumberCellViewModel = [AddressBookItemServiceModel new];
-    
-    [includedPhoneNumberCellViewModel injectValueObject:includedPhoneNumberItem];
-    [notIncludedPhoneNumberCellViewModel injectValueObject:notIncludedPhoneNumberItem];
-    
     XCTAssertFalse(includedPhoneNumberCellViewModel.callButtonHidden);
     XCTAssertTrue(notIncludedPhoneNumberCellViewModel.callButtonHidden);
+    
 }
 
 
