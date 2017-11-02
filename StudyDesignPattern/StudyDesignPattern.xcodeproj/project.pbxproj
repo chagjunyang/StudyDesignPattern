@@ -13,7 +13,6 @@
 		2D48FC1E1FAB567C0029266A /* NPMainInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC1D1FAB567C0029266A /* NPMainInteractor.m */; };
 		2D48FC211FAB56870029266A /* NPMainDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC201FAB56870029266A /* NPMainDataManager.m */; };
 		2D48FC241FAB56E70029266A /* NPMainDependencies.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC231FAB56E70029266A /* NPMainDependencies.m */; };
-		2D8C39391F8BD59C0007924A /* AddressBookItemCellTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C39381F8BD59C0007924A /* AddressBookItemCellTest.m */; };
 		2D95D9061F7FDD2B0011D7AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D9051F7FDD2B0011D7AB /* main.m */; };
 		2D95D9091F7FDD2B0011D7AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D9081F7FDD2B0011D7AB /* AppDelegate.m */; };
 		2D95D9111F7FDD2B0011D7AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D95D9101F7FDD2B0011D7AB /* Assets.xcassets */; };
@@ -45,7 +44,13 @@
 		2D48FC201FAB56870029266A /* NPMainDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMainDataManager.m; sourceTree = "<group>"; };
 		2D48FC221FAB56E70029266A /* NPMainDependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMainDependencies.h; sourceTree = "<group>"; };
 		2D48FC231FAB56E70029266A /* NPMainDependencies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMainDependencies.m; sourceTree = "<group>"; };
-		2D8C39381F8BD59C0007924A /* AddressBookItemCellTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookItemCellTest.m; sourceTree = "<group>"; };
+		2D48FC261FAB58980029266A /* NPVIPERProtocolDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPVIPERProtocolDefine.h; sourceTree = "<group>"; };
+		2D48FC271FAB58C60029266A /* NPMainPresenterProtocolDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPMainPresenterProtocolDefine.h; sourceTree = "<group>"; };
+		2D48FC291FAB59320029266A /* NPMainViewProtocolDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPMainViewProtocolDefine.h; sourceTree = "<group>"; };
+		2D48FC2A1FAB59400029266A /* NPMainWireFrameProtocolDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPMainWireFrameProtocolDefine.h; sourceTree = "<group>"; };
+		2D48FC2B1FAB59590029266A /* NPMainInteractorProtocolDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPMainInteractorProtocolDefine.h; sourceTree = "<group>"; };
+		2D48FC2D1FAB59820029266A /* NPMainDataManagerProtocolDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPMainDataManagerProtocolDefine.h; sourceTree = "<group>"; };
+		2D48FC2F1FAB5C320029266A /* StudyDesignPatternPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyDesignPatternPrefix.pch; sourceTree = "<group>"; };
 		2D95D9011F7FDD2B0011D7AB /* StudyDesignPattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyDesignPattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D95D9051F7FDD2B0011D7AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2D95D9071F7FDD2B0011D7AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,6 +85,7 @@
 		2D48FC091FAB4F3B0029266A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2D48FC251FAB58680029266A /* Define */,
 				2D48FC0A1FAB4F480029266A /* Util */,
 			);
 			name = Common;
@@ -97,6 +103,7 @@
 		2D48FC0B1FAB55240029266A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2D48FC281FAB58F40029266A /* Protocols */,
 				2D48FC181FAB56650029266A /* Dependencies */,
 				2D48FC141FAB56030029266A /* Manager */,
 				2D48FC111FAB55A40029266A /* Interactor */,
@@ -168,6 +175,26 @@
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
+		2D48FC251FAB58680029266A /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				2D48FC261FAB58980029266A /* NPVIPERProtocolDefine.h */,
+			);
+			name = Define;
+			sourceTree = "<group>";
+		};
+		2D48FC281FAB58F40029266A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2D48FC271FAB58C60029266A /* NPMainPresenterProtocolDefine.h */,
+				2D48FC291FAB59320029266A /* NPMainViewProtocolDefine.h */,
+				2D48FC2A1FAB59400029266A /* NPMainWireFrameProtocolDefine.h */,
+				2D48FC2B1FAB59590029266A /* NPMainInteractorProtocolDefine.h */,
+				2D48FC2D1FAB59820029266A /* NPMainDataManagerProtocolDefine.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		2D95D8F81F7FDD2B0011D7AB = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +232,7 @@
 				2D95D9081F7FDD2B0011D7AB /* AppDelegate.m */,
 				2D95D9151F7FDD2B0011D7AB /* Info.plist */,
 				2D95D9051F7FDD2B0011D7AB /* main.m */,
+				2D48FC2F1FAB5C320029266A /* StudyDesignPatternPrefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -214,7 +242,6 @@
 			children = (
 				2DE8A7361F80E516004B8D15 /* JSON */,
 				2DE8A7301F80E203004B8D15 /* Info.plist */,
-				2D8C39381F8BD59C0007924A /* AddressBookItemCellTest.m */,
 			);
 			path = StudyDesignPatternTests;
 			sourceTree = "<group>";
@@ -345,7 +372,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D8C39391F8BD59C0007924A /* AddressBookItemCellTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +482,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = StudyDesignPattern/StudyDesignPatternPrefix.pch;
 				INFOPLIST_FILE = StudyDesignPattern/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nhnent.StudyDesignPattern;
@@ -467,6 +495,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = StudyDesignPattern/StudyDesignPatternPrefix.pch;
 				INFOPLIST_FILE = StudyDesignPattern/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nhnent.StudyDesignPattern;

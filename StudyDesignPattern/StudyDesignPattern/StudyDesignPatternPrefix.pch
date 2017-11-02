@@ -1,0 +1,11 @@
+//
+//  StudyDesignPatternPrefix.pch
+//  StudyDesignPattern
+//
+//  Created by cjyang on 2017. 11. 2..
+//  Copyright © 2017년 NHNENT. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h> 
+#import "NPVIPERProtocolDefine.h"
