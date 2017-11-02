@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NPMainWireFrame : NSObject
+
+@interface NPMainWireFrame : NSObject <NPCommonWireFrameInterface>
+
+
+- (void)showMainViewControllerFromWindow:(UIWindow *)aWindw;
+
 
 @end

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NPMainInteractor : NSObject
+
+@interface NPMainInteractor : NSObject <NPCommonInteractorInterface>
 
 @end

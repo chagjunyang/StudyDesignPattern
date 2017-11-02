@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NPMainViewController : UIViewController
+
+@interface NPMainViewController : UIViewController <NPCommonViewInterface>
 
 @end

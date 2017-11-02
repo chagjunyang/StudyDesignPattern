@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NPMainPresenter : NSObject
+
+@interface NPMainPresenter : NSObject <NPCommonPresenterInterface>
 
 @end
