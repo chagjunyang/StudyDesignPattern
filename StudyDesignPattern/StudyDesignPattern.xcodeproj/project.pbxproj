@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D48FC0F1FAB55990029266A /* NPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC0E1FAB55990029266A /* NPMainViewController.m */; };
+		2D48FC171FAB565C0029266A /* NPMainWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC161FAB565C0029266A /* NPMainWireFrame.m */; };
+		2D48FC1B1FAB56740029266A /* NPMainPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC1A1FAB56740029266A /* NPMainPresenter.m */; };
+		2D48FC1E1FAB567C0029266A /* NPMainInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC1D1FAB567C0029266A /* NPMainInteractor.m */; };
+		2D48FC211FAB56870029266A /* NPMainDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC201FAB56870029266A /* NPMainDataManager.m */; };
+		2D48FC241FAB56E70029266A /* NPMainDependencies.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC231FAB56E70029266A /* NPMainDependencies.m */; };
 		2D8C39391F8BD59C0007924A /* AddressBookItemCellTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C39381F8BD59C0007924A /* AddressBookItemCellTest.m */; };
 		2D95D9061F7FDD2B0011D7AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D9051F7FDD2B0011D7AB /* main.m */; };
 		2D95D9091F7FDD2B0011D7AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D9081F7FDD2B0011D7AB /* AppDelegate.m */; };
@@ -27,6 +33,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D48FC0D1FAB55990029266A /* NPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMainViewController.h; sourceTree = "<group>"; };
+		2D48FC0E1FAB55990029266A /* NPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMainViewController.m; sourceTree = "<group>"; };
+		2D48FC151FAB565C0029266A /* NPMainWireFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMainWireFrame.h; sourceTree = "<group>"; };
+		2D48FC161FAB565C0029266A /* NPMainWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMainWireFrame.m; sourceTree = "<group>"; };
+		2D48FC191FAB56740029266A /* NPMainPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMainPresenter.h; sourceTree = "<group>"; };
+		2D48FC1A1FAB56740029266A /* NPMainPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMainPresenter.m; sourceTree = "<group>"; };
+		2D48FC1C1FAB567C0029266A /* NPMainInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMainInteractor.h; sourceTree = "<group>"; };
+		2D48FC1D1FAB567C0029266A /* NPMainInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMainInteractor.m; sourceTree = "<group>"; };
+		2D48FC1F1FAB56870029266A /* NPMainDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMainDataManager.h; sourceTree = "<group>"; };
+		2D48FC201FAB56870029266A /* NPMainDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMainDataManager.m; sourceTree = "<group>"; };
+		2D48FC221FAB56E70029266A /* NPMainDependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMainDependencies.h; sourceTree = "<group>"; };
+		2D48FC231FAB56E70029266A /* NPMainDependencies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMainDependencies.m; sourceTree = "<group>"; };
 		2D8C39381F8BD59C0007924A /* AddressBookItemCellTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookItemCellTest.m; sourceTree = "<group>"; };
 		2D95D9011F7FDD2B0011D7AB /* StudyDesignPattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyDesignPattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D95D9051F7FDD2B0011D7AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,18 +94,78 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
-		2D4ABD6D1FAAD89A0000107E /* List */ = {
+		2D48FC0B1FAB55240029266A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2D48FC181FAB56650029266A /* Dependencies */,
+				2D48FC141FAB56030029266A /* Manager */,
+				2D48FC111FAB55A40029266A /* Interactor */,
+				2D48FC121FAB55AB0029266A /* Presenter */,
+				2D48FC101FAB559E0029266A /* View */,
+				2D48FC131FAB55B30029266A /* WireFrame */,
 			);
-			name = List;
+			name = Main;
 			sourceTree = "<group>";
 		};
-		2D4ABD6E1FAAD8A30000107E /* Detail */ = {
+		2D48FC0C1FAB552C0029266A /* PointCharge */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Detail;
+			name = PointCharge;
+			sourceTree = "<group>";
+		};
+		2D48FC101FAB559E0029266A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D48FC0D1FAB55990029266A /* NPMainViewController.h */,
+				2D48FC0E1FAB55990029266A /* NPMainViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2D48FC111FAB55A40029266A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2D48FC1C1FAB567C0029266A /* NPMainInteractor.h */,
+				2D48FC1D1FAB567C0029266A /* NPMainInteractor.m */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		2D48FC121FAB55AB0029266A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2D48FC191FAB56740029266A /* NPMainPresenter.h */,
+				2D48FC1A1FAB56740029266A /* NPMainPresenter.m */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		2D48FC131FAB55B30029266A /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				2D48FC151FAB565C0029266A /* NPMainWireFrame.h */,
+				2D48FC161FAB565C0029266A /* NPMainWireFrame.m */,
+			);
+			name = WireFrame;
+			sourceTree = "<group>";
+		};
+		2D48FC141FAB56030029266A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2D48FC1F1FAB56870029266A /* NPMainDataManager.h */,
+				2D48FC201FAB56870029266A /* NPMainDataManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		2D48FC181FAB56650029266A /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				2D48FC221FAB56E70029266A /* NPMainDependencies.h */,
+				2D48FC231FAB56E70029266A /* NPMainDependencies.m */,
+			);
+			name = Dependencies;
 			sourceTree = "<group>";
 		};
 		2D95D8F81F7FDD2B0011D7AB = {
@@ -112,10 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				2D48FC091FAB4F3B0029266A /* Common */,
-				2D4ABD6E1FAAD8A30000107E /* Detail */,
-				2D4ABD6D1FAAD89A0000107E /* List */,
-				2D95D9071F7FDD2B0011D7AB /* AppDelegate.h */,
-				2D95D9081F7FDD2B0011D7AB /* AppDelegate.m */,
+				2D48FC0C1FAB552C0029266A /* PointCharge */,
+				2D48FC0B1FAB55240029266A /* Main */,
 				2D95D9101F7FDD2B0011D7AB /* Assets.xcassets */,
 				2D95D9041F7FDD2B0011D7AB /* Supporting Files */,
 			);
@@ -125,6 +201,8 @@
 		2D95D9041F7FDD2B0011D7AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2D95D9071F7FDD2B0011D7AB /* AppDelegate.h */,
+				2D95D9081F7FDD2B0011D7AB /* AppDelegate.m */,
 				2D95D9151F7FDD2B0011D7AB /* Info.plist */,
 				2D95D9051F7FDD2B0011D7AB /* main.m */,
 			);
@@ -252,8 +330,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D95D9091F7FDD2B0011D7AB /* AppDelegate.m in Sources */,
+				2D48FC241FAB56E70029266A /* NPMainDependencies.m in Sources */,
+				2D48FC171FAB565C0029266A /* NPMainWireFrame.m in Sources */,
 				2D95D9061F7FDD2B0011D7AB /* main.m in Sources */,
+				2D48FC1E1FAB567C0029266A /* NPMainInteractor.m in Sources */,
 				2D95D9231F7FE57D0011D7AB /* UIView+TUMLayout.m in Sources */,
+				2D48FC0F1FAB55990029266A /* NPMainViewController.m in Sources */,
+				2D48FC211FAB56870029266A /* NPMainDataManager.m in Sources */,
+				2D48FC1B1FAB56740029266A /* NPMainPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
