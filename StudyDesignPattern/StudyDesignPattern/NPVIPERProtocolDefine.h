@@ -7,7 +7,7 @@
 //
 
 
-@protocol NPCommonDependenciesInterface;
+@protocol NPCommonDependencyInjectorInterface;
 @protocol NPCommonWireFrameInterface;
 @protocol NPCommonViewInterface;
 @protocol NPCommonPresenterInterface;
@@ -17,7 +17,7 @@
 #pragma mark - NPCommonDependenciesInterface
 
 
-@protocol NPCommonDependenciesInterface <NSObject>
+@protocol NPCommonDependencyInjectorInterface <NSObject>
 
 @end
 
@@ -27,13 +27,22 @@
 
 @protocol NPCommonWireFrameInterface <NSObject>
 
+
 @property (strong, nonatomic, readwrite) id<NPCommonViewInterface> view;
-@property (strong, nonatomic, readwrite) id<NPCommonViewInterface> presenter;
-@property (strong, nonatomic, readwrite) id<NPCommonViewInterface> nextWireFrame;
+@property (strong, nonatomic, readwrite) id<NPCommonPresenterInterface> presenter;
+
+@property (strong, nonatomic, readwrite) id<NPCommonDependencyInjectorInterface> nextDependencyInjector;
+@property (weak, nonatomic, readwrite) id<NPCommonWireFrameInterface> nextWireFrame;
+
+@property (weak, nonatomic, readwrite) id<NPCommonPresenterInterface> prevWireFrame;
 @property (weak, nonatomic, readwrite) UIViewController *prevContext;
 
-- (void)showViewControllerFromContext:(UIViewController *)aController;
-- (void)hideViewController;
+- (void)presentViewControllerFromPresentingViewController:(UIViewController *)aController
+                                      presentingWireFrame:(id<NPCommonViewInterface>)aPresentingWireFrame;
+- (void)dismissViewController;
+- (void)dismissedPresentedViewController:(UIViewController *)presentedViewController
+                      presentedWireFrame:(id<NPCommonWireFrameInterface>)aPresentedWireFrame;
+
 
 @end
 

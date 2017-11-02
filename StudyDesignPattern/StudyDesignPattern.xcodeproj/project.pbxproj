@@ -12,7 +12,7 @@
 		2D48FC1B1FAB56740029266A /* NPMainPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC1A1FAB56740029266A /* NPMainPresenter.m */; };
 		2D48FC1E1FAB567C0029266A /* NPMainInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC1D1FAB567C0029266A /* NPMainInteractor.m */; };
 		2D48FC211FAB56870029266A /* NPMainDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC201FAB56870029266A /* NPMainDataManager.m */; };
-		2D48FC241FAB56E70029266A /* NPMainDependencies.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC231FAB56E70029266A /* NPMainDependencies.m */; };
+		2D48FC241FAB56E70029266A /* NPMainDependencyInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC231FAB56E70029266A /* NPMainDependencyInjector.m */; };
 		2D95D9061F7FDD2B0011D7AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D9051F7FDD2B0011D7AB /* main.m */; };
 		2D95D9091F7FDD2B0011D7AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D9081F7FDD2B0011D7AB /* AppDelegate.m */; };
 		2D95D9111F7FDD2B0011D7AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D95D9101F7FDD2B0011D7AB /* Assets.xcassets */; };
@@ -42,8 +42,8 @@
 		2D48FC1D1FAB567C0029266A /* NPMainInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMainInteractor.m; sourceTree = "<group>"; };
 		2D48FC1F1FAB56870029266A /* NPMainDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMainDataManager.h; sourceTree = "<group>"; };
 		2D48FC201FAB56870029266A /* NPMainDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMainDataManager.m; sourceTree = "<group>"; };
-		2D48FC221FAB56E70029266A /* NPMainDependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMainDependencies.h; sourceTree = "<group>"; };
-		2D48FC231FAB56E70029266A /* NPMainDependencies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMainDependencies.m; sourceTree = "<group>"; };
+		2D48FC221FAB56E70029266A /* NPMainDependencyInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMainDependencyInjector.h; sourceTree = "<group>"; };
+		2D48FC231FAB56E70029266A /* NPMainDependencyInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMainDependencyInjector.m; sourceTree = "<group>"; };
 		2D48FC261FAB58980029266A /* NPVIPERProtocolDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPVIPERProtocolDefine.h; sourceTree = "<group>"; };
 		2D48FC271FAB58C60029266A /* NPMainPresenterProtocolDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPMainPresenterProtocolDefine.h; sourceTree = "<group>"; };
 		2D48FC291FAB59320029266A /* NPMainViewProtocolDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPMainViewProtocolDefine.h; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				2D48FC281FAB58F40029266A /* Protocols */,
-				2D48FC181FAB56650029266A /* Dependencies */,
+				2D48FC181FAB56650029266A /* DependencyInjector */,
 				2D48FC141FAB56030029266A /* Manager */,
 				2D48FC111FAB55A40029266A /* Interactor */,
 				2D48FC121FAB55AB0029266A /* Presenter */,
@@ -166,13 +166,13 @@
 			name = Manager;
 			sourceTree = "<group>";
 		};
-		2D48FC181FAB56650029266A /* Dependencies */ = {
+		2D48FC181FAB56650029266A /* DependencyInjector */ = {
 			isa = PBXGroup;
 			children = (
-				2D48FC221FAB56E70029266A /* NPMainDependencies.h */,
-				2D48FC231FAB56E70029266A /* NPMainDependencies.m */,
+				2D48FC221FAB56E70029266A /* NPMainDependencyInjector.h */,
+				2D48FC231FAB56E70029266A /* NPMainDependencyInjector.m */,
 			);
-			name = Dependencies;
+			name = DependencyInjector;
 			sourceTree = "<group>";
 		};
 		2D48FC251FAB58680029266A /* Define */ = {
@@ -357,7 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D95D9091F7FDD2B0011D7AB /* AppDelegate.m in Sources */,
-				2D48FC241FAB56E70029266A /* NPMainDependencies.m in Sources */,
+				2D48FC241FAB56E70029266A /* NPMainDependencyInjector.m in Sources */,
 				2D48FC171FAB565C0029266A /* NPMainWireFrame.m in Sources */,
 				2D95D9061F7FDD2B0011D7AB /* main.m in Sources */,
 				2D48FC1E1FAB567C0029266A /* NPMainInteractor.m in Sources */,

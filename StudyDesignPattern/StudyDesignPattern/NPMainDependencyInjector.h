@@ -1,5 +1,5 @@
 //
-//  NPMainDependencies.h
+//  NPMainDependencyInjector.h
 //  StudyDesignPattern
 //
 //  Created by cjyang on 2017. 11. 2..
@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NPMainDependencies : NSObject <NPCommonDependenciesInterface>
+@interface NPMainDependencyInjector : NSObject <NPCommonDependenciesInterface>
 
 @end
