@@ -6,13 +6,20 @@
 //  Copyright © 2017년 NHNENT. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "NPMainWireFrameProtocolDefine.h"
 
 
-@interface NPMainWireFrame : NSObject <NPCommonWireFrameInterface>
+@interface NPMainWireFrame : NSObject <NPMainWireFrameInterface>
 
 
-- (void)showMainViewControllerFromWindow:(UIWindow *)aWindw;
+@property (strong, nonatomic, readwrite) id<NPCommonViewInterface> view;
+@property (strong, nonatomic, readwrite) id<NPCommonPresenterInterface> presenter;
+
+@property (strong, nonatomic, readwrite) id<NPCommonDependencyInjectorInterface> nextDependencyInjector;
+@property (weak, nonatomic, readwrite) id<NPCommonWireFrameInterface> nextWireFrame;
+
+@property (weak, nonatomic, readonly) id<NPCommonWireFrameInterface> prevWireFrame;
+@property (weak, nonatomic, readonly) UIViewController *prevContext;
 
 
 @end

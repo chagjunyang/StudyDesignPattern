@@ -6,9 +6,17 @@
 //  Copyright © 2017년 NHNENT. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "NPMainViewProtocolDefine.h"
+#import "NPMainPresenterProtocolDefine.h"
+#import "NPMainInteractorProtocolDefine.h"
 
 
-@interface NPMainPresenter : NSObject <NPCommonPresenterInterface>
+@interface NPMainPresenter : NSObject <NPMainPresenterInterface>
+
+
+@property (weak, nonatomic, readwrite) id<NPCommonWireFrameInterface> wireFrame;
+@property (weak, nonatomic, readwrite) id<NPMainViewInterface> view;
+@property (strong, nonatomic, readwrite) id<NPMainInteractorInterface> interactor;
+
 
 @end

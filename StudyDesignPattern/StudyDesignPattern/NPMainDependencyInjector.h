@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol NPMainWireFrameInterface;
 
-@interface NPMainDependencyInjector : NSObject <NPCommonDependenciesInterface>
+
+@interface NPMainDependencyInjector : NSObject <NPCommonDependencyInjectorInterface>
+
+- (id<NPMainWireFrameInterface>)mainWireFrameWithInjectedDependencies;
 
 @end

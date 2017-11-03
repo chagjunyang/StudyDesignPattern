@@ -19,6 +19,9 @@
 
 @protocol NPCommonDependencyInjectorInterface <NSObject>
 
+@required
+- (id<NPCommonWireFrameInterface>)wireFrameWithInjectedDependencies;
+
 @end
 
 
@@ -28,17 +31,19 @@
 @protocol NPCommonWireFrameInterface <NSObject>
 
 
+@required
 @property (strong, nonatomic, readwrite) id<NPCommonViewInterface> view;
 @property (strong, nonatomic, readwrite) id<NPCommonPresenterInterface> presenter;
 
 @property (strong, nonatomic, readwrite) id<NPCommonDependencyInjectorInterface> nextDependencyInjector;
 @property (weak, nonatomic, readwrite) id<NPCommonWireFrameInterface> nextWireFrame;
 
-@property (weak, nonatomic, readwrite) id<NPCommonPresenterInterface> prevWireFrame;
-@property (weak, nonatomic, readwrite) UIViewController *prevContext;
+@property (weak, nonatomic, readonly) id<NPCommonWireFrameInterface> prevWireFrame;
+@property (weak, nonatomic, readonly) UIViewController *prevContext;
 
 - (void)presentViewControllerFromPresentingViewController:(UIViewController *)aController
-                                      presentingWireFrame:(id<NPCommonViewInterface>)aPresentingWireFrame;
+                                      presentingWireFrame:(id<NPCommonWireFrameInterface>)aPresentingWireFrame;
+- (void)showNextWireFrame;
 - (void)dismissViewController;
 - (void)dismissedPresentedViewController:(UIViewController *)presentedViewController
                       presentedWireFrame:(id<NPCommonWireFrameInterface>)aPresentedWireFrame;
@@ -52,6 +57,17 @@
 
 @protocol NPCommonViewInterface <NSObject>
 
+@required
+@property (weak, nonatomic, readwrite) id<NPCommonPresenterInterface> presenter;
+
+@optional
+- (UIEdgeInsets)viewEdgeInsets;
+- (void)willDisplayView;
+- (void)didEndDisplayView;
+
+@required
+- (CGSize)viewSizeForContainerSize:(CGSize)aContainerSize;
+
 @end
 
 
@@ -60,13 +76,12 @@
 
 @protocol NPCommonPresenterInterface <NSObject>
 
-@end
+@property (weak, nonatomic, readwrite) id<NPCommonWireFrameInterface> wireFrame;
+@property (weak, nonatomic, readwrite) id<NPCommonViewInterface> view;
+@property (strong, nonatomic, readwrite) id interactor;
 
-
-#pragma mark - NPCommonInteractorInterface
-
-
-@protocol NPCommonInteractorInterface <NSObject>
+@required
+- (void)updateView;
 
 @end
 

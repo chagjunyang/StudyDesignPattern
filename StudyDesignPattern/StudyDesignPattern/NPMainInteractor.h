@@ -6,9 +6,9 @@
 //  Copyright © 2017년 NHNENT. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "NPMainInteractorProtocolDefine.h"
 
 
-@interface NPMainInteractor : NSObject <NPCommonInteractorInterface>
+@interface NPMainInteractor : NSObject <NPMainInteractorInterface>
 
 @end

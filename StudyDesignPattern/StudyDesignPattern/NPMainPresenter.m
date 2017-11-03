@@ -8,6 +8,22 @@
 
 #import "NPMainPresenter.h"
 
+
 @implementation NPMainPresenter
+
+
+- (void)updateView
+{
+    [self.interactor fetchTitleWithCompletion:^(NSString *aTitle) {
+        [self.view setPointChargeButtonTitle:aTitle];
+    }];
+}
+
+
+- (void)tappedChargeButton:(id)aSender
+{
+    [self.wireFrame showNextWireFrame];
+}
+
 
 @end

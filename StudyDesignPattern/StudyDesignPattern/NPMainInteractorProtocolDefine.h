@@ -2,12 +2,12 @@
 //  NPMainInteractorProtocolDefine.h
 //  StudyDesignPattern
 //
-//  Created by cjyang on 2017. 11. 2..
+//  Created by cjyang on 2017. 11. 3..
 //  Copyright © 2017년 NHNENT. All rights reserved.
 //
 
-#ifndef NPMainInteractorProtocolDefine_h
-#define NPMainInteractorProtocolDefine_h
+@protocol NPMainInteractorInterface <NSObject>
 
+- (void)fetchTitleWithCompletion:(void(^)(NSString *aTitle))aCompletion;
 
-#endif /* NPMainInteractorProtocolDefine_h */
+@end

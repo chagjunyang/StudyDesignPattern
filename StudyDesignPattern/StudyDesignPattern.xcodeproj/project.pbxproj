@@ -17,6 +17,7 @@
 		2D95D9091F7FDD2B0011D7AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D9081F7FDD2B0011D7AB /* AppDelegate.m */; };
 		2D95D9111F7FDD2B0011D7AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D95D9101F7FDD2B0011D7AB /* Assets.xcassets */; };
 		2D95D9231F7FE57D0011D7AB /* UIView+TUMLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D9221F7FE57D0011D7AB /* UIView+TUMLayout.m */; };
+		2DCEC2811FAC4B00001C45B4 /* NPWireFrameHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEC2801FAC4B00001C45B4 /* NPWireFrameHelper.m */; };
 		2DD6C0BE1F8298CF002443C6 /* addressBook.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8A7371F80E530004B8D15 /* addressBook.json */; };
 		2DE8A7381F80E530004B8D15 /* addressBook.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8A7371F80E530004B8D15 /* addressBook.json */; };
 /* End PBXBuildFile section */
@@ -48,8 +49,6 @@
 		2D48FC271FAB58C60029266A /* NPMainPresenterProtocolDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPMainPresenterProtocolDefine.h; sourceTree = "<group>"; };
 		2D48FC291FAB59320029266A /* NPMainViewProtocolDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPMainViewProtocolDefine.h; sourceTree = "<group>"; };
 		2D48FC2A1FAB59400029266A /* NPMainWireFrameProtocolDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPMainWireFrameProtocolDefine.h; sourceTree = "<group>"; };
-		2D48FC2B1FAB59590029266A /* NPMainInteractorProtocolDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPMainInteractorProtocolDefine.h; sourceTree = "<group>"; };
-		2D48FC2D1FAB59820029266A /* NPMainDataManagerProtocolDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPMainDataManagerProtocolDefine.h; sourceTree = "<group>"; };
 		2D48FC2F1FAB5C320029266A /* StudyDesignPatternPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyDesignPatternPrefix.pch; sourceTree = "<group>"; };
 		2D95D9011F7FDD2B0011D7AB /* StudyDesignPattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyDesignPattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D95D9051F7FDD2B0011D7AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -59,6 +58,9 @@
 		2D95D9151F7FDD2B0011D7AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D95D9211F7FE57D0011D7AB /* UIView+TUMLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TUMLayout.h"; sourceTree = "<group>"; };
 		2D95D9221F7FE57D0011D7AB /* UIView+TUMLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TUMLayout.m"; sourceTree = "<group>"; };
+		2DCEC27F1FAC4B00001C45B4 /* NPWireFrameHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPWireFrameHelper.h; sourceTree = "<group>"; };
+		2DCEC2801FAC4B00001C45B4 /* NPWireFrameHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPWireFrameHelper.m; sourceTree = "<group>"; };
+		2DCEC2821FAC4E93001C45B4 /* NPMainInteractorProtocolDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMainInteractorProtocolDefine.h; sourceTree = "<group>"; };
 		2DE8A72C1F80E203004B8D15 /* StudyDesignPatternTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyDesignPatternTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8A7301F80E203004B8D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8A7371F80E530004B8D15 /* addressBook.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = addressBook.json; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		2D48FC091FAB4F3B0029266A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2DCEC2711FAC3181001C45B4 /* BaseClasses */,
 				2D48FC251FAB58680029266A /* Define */,
 				2D48FC0A1FAB4F480029266A /* Util */,
 			);
@@ -96,6 +99,8 @@
 			children = (
 				2D95D9211F7FE57D0011D7AB /* UIView+TUMLayout.h */,
 				2D95D9221F7FE57D0011D7AB /* UIView+TUMLayout.m */,
+				2DCEC27F1FAC4B00001C45B4 /* NPWireFrameHelper.h */,
+				2DCEC2801FAC4B00001C45B4 /* NPWireFrameHelper.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -189,8 +194,7 @@
 				2D48FC271FAB58C60029266A /* NPMainPresenterProtocolDefine.h */,
 				2D48FC291FAB59320029266A /* NPMainViewProtocolDefine.h */,
 				2D48FC2A1FAB59400029266A /* NPMainWireFrameProtocolDefine.h */,
-				2D48FC2B1FAB59590029266A /* NPMainInteractorProtocolDefine.h */,
-				2D48FC2D1FAB59820029266A /* NPMainDataManagerProtocolDefine.h */,
+				2DCEC2821FAC4E93001C45B4 /* NPMainInteractorProtocolDefine.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -235,6 +239,13 @@
 				2D48FC2F1FAB5C320029266A /* StudyDesignPatternPrefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2DCEC2711FAC3181001C45B4 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BaseClasses;
 			sourceTree = "<group>";
 		};
 		2DE8A72D1F80E203004B8D15 /* StudyDesignPatternTests */ = {
@@ -358,6 +369,7 @@
 			files = (
 				2D95D9091F7FDD2B0011D7AB /* AppDelegate.m in Sources */,
 				2D48FC241FAB56E70029266A /* NPMainDependencyInjector.m in Sources */,
+				2DCEC2811FAC4B00001C45B4 /* NPWireFrameHelper.m in Sources */,
 				2D48FC171FAB565C0029266A /* NPMainWireFrame.m in Sources */,
 				2D95D9061F7FDD2B0011D7AB /* main.m in Sources */,
 				2D48FC1E1FAB567C0029266A /* NPMainInteractor.m in Sources */,

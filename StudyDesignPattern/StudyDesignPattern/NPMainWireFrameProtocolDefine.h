@@ -6,8 +6,8 @@
 //  Copyright © 2017년 NHNENT. All rights reserved.
 //
 
-#ifndef NPMainWireFrameProtocolDefine_h
-#define NPMainWireFrameProtocolDefine_h
+@protocol NPMainWireFrameInterface <NPCommonWireFrameInterface>
 
+- (void)showMainViewControllerFromWindow:(UIWindow *)aWindw;
 
-#endif /* NPMainWireFrameProtocolDefine_h */
+@end

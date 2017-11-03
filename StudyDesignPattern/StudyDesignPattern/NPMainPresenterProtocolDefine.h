@@ -6,8 +6,9 @@
 //  Copyright © 2017년 NHNENT. All rights reserved.
 //
 
-#ifndef NPMainPresenterProtocolDefine_h
-#define NPMainPresenterProtocolDefine_h
 
+@protocol NPMainPresenterInterface <NPCommonPresenterInterface>
 
-#endif /* NPMainPresenterProtocolDefine_h */
+- (void)tappedChargeButton:(id)aSender;
+
+@end

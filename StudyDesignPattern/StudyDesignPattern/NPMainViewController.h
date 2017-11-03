@@ -6,9 +6,14 @@
 //  Copyright © 2017년 NHNENT. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "NPMainViewProtocolDefine.h"
+#import "NPMainPresenterProtocolDefine.h"
 
 
-@interface NPMainViewController : UIViewController <NPCommonViewInterface>
+@interface NPMainViewController : UIViewController <NPMainViewInterface>
+
+
+@property (weak, nonatomic, readwrite) id<NPMainPresenterInterface> presenter;
+
 
 @end

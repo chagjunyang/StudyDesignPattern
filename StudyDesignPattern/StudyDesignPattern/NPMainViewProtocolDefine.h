@@ -6,8 +6,9 @@
 //  Copyright © 2017년 NHNENT. All rights reserved.
 //
 
-#ifndef NPMainViewProtocolDefine_h
-#define NPMainViewProtocolDefine_h
 
+@protocol NPMainViewInterface <NPCommonViewInterface>
 
-#endif /* NPMainViewProtocolDefine_h */
+- (void)setPointChargeButtonTitle:(NSString *)aTitle;
+
+@end

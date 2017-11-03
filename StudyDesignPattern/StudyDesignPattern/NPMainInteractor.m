@@ -8,6 +8,17 @@
 
 #import "NPMainInteractor.h"
 
+
 @implementation NPMainInteractor
+
+
+#pragma mark - NPMainInteractorInterface
+
+
+- (void)fetchTitleWithCompletion:(void(^)(NSString *aTitle))aCompletion
+{
+    aCompletion(@"포인트 충전");
+}
+
 
 @end

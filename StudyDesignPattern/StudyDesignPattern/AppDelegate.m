@@ -7,15 +7,30 @@
 //
 
 #import "AppDelegate.h"
+#import "NPMainDependencyInjector.h"
+#import "NPMainWireFrameProtocolDefine.h"
+
 
 @interface AppDelegate ()
 
+@property (strong, nonatomic, readonly) id<NPMainWireFrameInterface> mainWireFrame;
+
 @end
+
 
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [self setWindow:[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]];
+    [[self window] setBackgroundColor:[UIColor whiteColor]];
+    [[self window] makeKeyAndVisible];
+    
+    NPMainDependencyInjector *sMainDI = [NPMainDependencyInjector new];
+    _mainWireFrame = [sMainDI mainWireFrameWithInjectedDependencies];
+    
+    [self.mainWireFrame showMainViewControllerFromWindow:self.window];
     
     return YES;
 }
