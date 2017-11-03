@@ -26,6 +26,7 @@
 		2DCEC2B31FAC842F001C45B4 /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEC2B21FAC842F001C45B4 /* DeviceInfo.m */; };
 		2DCEC2B61FAC88CA001C45B4 /* NPBasePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEC2B51FAC88CA001C45B4 /* NPBasePresenter.m */; };
 		2DCEC2B91FAC8A4E001C45B4 /* NPBaseDependencyInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEC2B81FAC8A4E001C45B4 /* NPBaseDependencyInjector.m */; };
+		2DCEC2BD1FAC8FA8001C45B4 /* NPPointChargeMainDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEC2BC1FAC8FA8001C45B4 /* NPPointChargeMainDataSource.m */; };
 		2DD6C0BE1F8298CF002443C6 /* addressBook.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8A7371F80E530004B8D15 /* addressBook.json */; };
 		2DE8A7381F80E530004B8D15 /* addressBook.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8A7371F80E530004B8D15 /* addressBook.json */; };
 /* End PBXBuildFile section */
@@ -90,6 +91,8 @@
 		2DCEC2B51FAC88CA001C45B4 /* NPBasePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPBasePresenter.m; sourceTree = "<group>"; };
 		2DCEC2B71FAC8A4E001C45B4 /* NPBaseDependencyInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPBaseDependencyInjector.h; sourceTree = "<group>"; };
 		2DCEC2B81FAC8A4E001C45B4 /* NPBaseDependencyInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPBaseDependencyInjector.m; sourceTree = "<group>"; };
+		2DCEC2BB1FAC8FA8001C45B4 /* NPPointChargeMainDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPPointChargeMainDataSource.h; sourceTree = "<group>"; };
+		2DCEC2BC1FAC8FA8001C45B4 /* NPPointChargeMainDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPPointChargeMainDataSource.m; sourceTree = "<group>"; };
 		2DE8A72C1F80E203004B8D15 /* StudyDesignPatternTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyDesignPatternTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8A7301F80E203004B8D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8A7371F80E530004B8D15 /* addressBook.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = addressBook.json; sourceTree = "<group>"; };
@@ -329,6 +332,8 @@
 			children = (
 				2DCEC2991FAC54DB001C45B4 /* NPPointChargeMainDataManager.h */,
 				2DCEC29A1FAC54DB001C45B4 /* NPPointChargeMainDataManager.m */,
+				2DCEC2BB1FAC8FA8001C45B4 /* NPPointChargeMainDataSource.h */,
+				2DCEC2BC1FAC8FA8001C45B4 /* NPPointChargeMainDataSource.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 			files = (
 				2D95D9091F7FDD2B0011D7AB /* AppDelegate.m in Sources */,
 				2D48FC241FAB56E70029266A /* NPMainDependencyInjector.m in Sources */,
+				2DCEC2BD1FAC8FA8001C45B4 /* NPPointChargeMainDataSource.m in Sources */,
 				2DCEC29E1FAC54ED001C45B4 /* NPPointChargeMainDependencyInjector.m in Sources */,
 				2DCEC2B31FAC842F001C45B4 /* DeviceInfo.m in Sources */,
 				2D48FC171FAB565C0029266A /* NPMainWireFrame.m in Sources */,
