@@ -7,7 +7,9 @@
 //
 
 #import "NPPointChargeMainPresenterProtocolDefine.h"
+#import "NPBasePresenter.h"
 
-@interface NPPointChargeMainPresenter : NSObject <NPPointChargeMainPresenterInterface>
+
+@interface NPPointChargeMainPresenter : NPBasePresenter <NPPointChargeMainPresenterInterface>
 
 @end

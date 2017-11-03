@@ -6,8 +6,9 @@
 //  Copyright © 2017년 NHNENT. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "NPBaseDependencyInjector.h"
 
-@interface NPPointChargeMainDependencyInjector : NSObject
+
+@interface NPPointChargeMainDependencyInjector : NPBaseDependencyInjector <NPCommonDependencyInjectorInterface>
 
 @end

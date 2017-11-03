@@ -6,13 +6,12 @@
 //  Copyright © 2017년 NHNENT. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "NPBaseDependencyInjector.h"
 
 @protocol NPMainWireFrameInterface;
 
 
-@interface NPMainDependencyInjector : NSObject <NPCommonDependencyInjectorInterface>
+@interface NPMainDependencyInjector : NPBaseDependencyInjector <NPCommonDependencyInjectorInterface>
 
-- (id<NPMainWireFrameInterface>)mainWireFrameWithInjectedDependencies;
 
 @end

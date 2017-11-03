@@ -13,9 +13,27 @@
 #import "NPMainPresenter.h"
 #import "NPMainInteractor.h"
 #import "NPMainWireFrame.h"
+#import "NPPointChargeMainDependencyInjector.h"
 
 
 @implementation NPMainDependencyInjector
+
+
+- (instancetype)init
+{
+    self = [super init];
+    
+    if (self)
+    {
+        self.wireFrame = [NPMainWireFrame new];
+        self.presenter = [NPMainPresenter new];
+        self.view = [NPMainViewController new];
+        self.interactor = [NPMainInteractor new];
+        self.nextDependencyInjector = [NPPointChargeMainDependencyInjector new];
+    }
+    
+    return self;
+}
 
 
 #pragma mark - NPCommonDependencyInjectorInterface
@@ -23,28 +41,7 @@
 
 - (id<NPCommonWireFrameInterface>)wireFrameWithInjectedDependencies
 {
-    return [self mainWireFrameWithInjectedDependencies];
-}
-
-
-- (id<NPMainWireFrameInterface>)mainWireFrameWithInjectedDependencies
-{
-    NPMainWireFrame *sWireFrame = [NPMainWireFrame new];
-    NPMainPresenter *sPresenter = [NPMainPresenter new];
-    NPMainViewController *sView = [NPMainViewController new];
-    NPMainInteractor *sInteractor = [NPMainInteractor new];
-    
-    sWireFrame.presenter = sPresenter;
-    sWireFrame.view = sView;
-    sWireFrame.nextWireFrame = nil;
-    
-    sPresenter.interactor = sInteractor;
-    sPresenter.view = sView;
-    sPresenter.wireFrame = sWireFrame;
-    
-    sView.presenter = sPresenter;
-    
-    return sWireFrame;
+    return [super wireFrameWithInjectedDependencies];
 }
 
 

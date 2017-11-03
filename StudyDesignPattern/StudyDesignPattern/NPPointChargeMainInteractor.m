@@ -8,6 +8,7 @@
 
 #import "NPPointChargeMainInteractor.h"
 
+
 @implementation NPPointChargeMainInteractor
 
 @end

@@ -7,7 +7,11 @@
 //
 
 #import "NPPointChargeMainInteractorProtocolDefine.h"
+#import "NPPointChargeMainDataManagerProtocolDefine.h"
+
 
 @interface NPPointChargeMainInteractor : NSObject <NPPointChargeMainInteractorInterface>
+
+@property (strong, nonatomic ,readwrite) id<NPPointChargeMainDataManagerInterface> dataManager;
 
 @end

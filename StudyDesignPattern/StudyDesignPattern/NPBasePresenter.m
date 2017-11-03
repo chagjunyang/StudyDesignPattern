@@ -1,20 +1,20 @@
 //
-//  NPPointChargeMainPresenter.m
+//  NPBasePresenter.m
 //  StudyDesignPattern
 //
 //  Created by cjyang on 2017. 11. 3..
 //  Copyright © 2017년 NHNENT. All rights reserved.
 //
 
-#import "NPPointChargeMainPresenter.h"
+#import "NPBasePresenter.h"
 
 
-@implementation NPPointChargeMainPresenter
+@implementation NPBasePresenter
 
 
 - (void)updateView
 {
-    
+    //nothing
 }
 
 

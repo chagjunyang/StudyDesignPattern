@@ -9,4 +9,5 @@
 
 @protocol NPPointChargeMainViewInterfact <NPCommonViewInterface>
 
+
 @end

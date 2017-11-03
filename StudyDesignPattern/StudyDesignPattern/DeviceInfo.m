@@ -1,20 +1,20 @@
 //
-//  NPPointChargeMainPresenter.m
+//  DeviceInfo.m
 //  StudyDesignPattern
 //
 //  Created by cjyang on 2017. 11. 3..
 //  Copyright © 2017년 NHNENT. All rights reserved.
 //
 
-#import "NPPointChargeMainPresenter.h"
+#import "DeviceInfo.h"
 
 
-@implementation NPPointChargeMainPresenter
+@implementation DeviceInfo
 
 
-- (void)updateView
++ (CGSize)deviceSize
 {
-    
+    return ([[UIScreen mainScreen] bounds].size);
 }
 
 

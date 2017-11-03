@@ -8,6 +8,7 @@
 
 #import "NPPointChargeMainDataManagerProtocolDefine.h"
 
+
 @interface NPPointChargeMainDataManager : NSObject <NPPointChargeMainDataManagerInterface>
 
 @end
