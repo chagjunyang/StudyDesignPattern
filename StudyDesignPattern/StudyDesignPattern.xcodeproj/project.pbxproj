@@ -11,13 +11,18 @@
 		2D48FC171FAB565C0029266A /* NPMainWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC161FAB565C0029266A /* NPMainWireFrame.m */; };
 		2D48FC1B1FAB56740029266A /* NPMainPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC1A1FAB56740029266A /* NPMainPresenter.m */; };
 		2D48FC1E1FAB567C0029266A /* NPMainInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC1D1FAB567C0029266A /* NPMainInteractor.m */; };
-		2D48FC211FAB56870029266A /* NPMainDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC201FAB56870029266A /* NPMainDataManager.m */; };
 		2D48FC241FAB56E70029266A /* NPMainDependencyInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D48FC231FAB56E70029266A /* NPMainDependencyInjector.m */; };
 		2D95D9061F7FDD2B0011D7AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D9051F7FDD2B0011D7AB /* main.m */; };
 		2D95D9091F7FDD2B0011D7AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D9081F7FDD2B0011D7AB /* AppDelegate.m */; };
 		2D95D9111F7FDD2B0011D7AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D95D9101F7FDD2B0011D7AB /* Assets.xcassets */; };
 		2D95D9231F7FE57D0011D7AB /* UIView+TUMLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D95D9221F7FE57D0011D7AB /* UIView+TUMLayout.m */; };
 		2DCEC2811FAC4B00001C45B4 /* NPWireFrameHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEC2801FAC4B00001C45B4 /* NPWireFrameHelper.m */; };
+		2DCEC2881FAC5443001C45B4 /* NPPointChargeMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEC2871FAC5443001C45B4 /* NPPointChargeMainViewController.m */; };
+		2DCEC2921FAC54BA001C45B4 /* NPPointChargeMainWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEC2911FAC54BA001C45B4 /* NPPointChargeMainWireFrame.m */; };
+		2DCEC2951FAC54CE001C45B4 /* NPPointChargeMainPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEC2941FAC54CE001C45B4 /* NPPointChargeMainPresenter.m */; };
+		2DCEC2981FAC54D4001C45B4 /* NPPointChargeMainInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEC2971FAC54D4001C45B4 /* NPPointChargeMainInteractor.m */; };
+		2DCEC29B1FAC54DB001C45B4 /* NPPointChargeMainDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEC29A1FAC54DB001C45B4 /* NPPointChargeMainDataManager.m */; };
+		2DCEC29E1FAC54ED001C45B4 /* NPPointChargeMainDependencyInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEC29D1FAC54ED001C45B4 /* NPPointChargeMainDependencyInjector.m */; };
 		2DD6C0BE1F8298CF002443C6 /* addressBook.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8A7371F80E530004B8D15 /* addressBook.json */; };
 		2DE8A7381F80E530004B8D15 /* addressBook.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8A7371F80E530004B8D15 /* addressBook.json */; };
 /* End PBXBuildFile section */
@@ -41,8 +46,6 @@
 		2D48FC1A1FAB56740029266A /* NPMainPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMainPresenter.m; sourceTree = "<group>"; };
 		2D48FC1C1FAB567C0029266A /* NPMainInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMainInteractor.h; sourceTree = "<group>"; };
 		2D48FC1D1FAB567C0029266A /* NPMainInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMainInteractor.m; sourceTree = "<group>"; };
-		2D48FC1F1FAB56870029266A /* NPMainDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMainDataManager.h; sourceTree = "<group>"; };
-		2D48FC201FAB56870029266A /* NPMainDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMainDataManager.m; sourceTree = "<group>"; };
 		2D48FC221FAB56E70029266A /* NPMainDependencyInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMainDependencyInjector.h; sourceTree = "<group>"; };
 		2D48FC231FAB56E70029266A /* NPMainDependencyInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPMainDependencyInjector.m; sourceTree = "<group>"; };
 		2D48FC261FAB58980029266A /* NPVIPERProtocolDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPVIPERProtocolDefine.h; sourceTree = "<group>"; };
@@ -61,6 +64,23 @@
 		2DCEC27F1FAC4B00001C45B4 /* NPWireFrameHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPWireFrameHelper.h; sourceTree = "<group>"; };
 		2DCEC2801FAC4B00001C45B4 /* NPWireFrameHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPWireFrameHelper.m; sourceTree = "<group>"; };
 		2DCEC2821FAC4E93001C45B4 /* NPMainInteractorProtocolDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPMainInteractorProtocolDefine.h; sourceTree = "<group>"; };
+		2DCEC2861FAC5443001C45B4 /* NPPointChargeMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPPointChargeMainViewController.h; sourceTree = "<group>"; };
+		2DCEC2871FAC5443001C45B4 /* NPPointChargeMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPPointChargeMainViewController.m; sourceTree = "<group>"; };
+		2DCEC2901FAC54BA001C45B4 /* NPPointChargeMainWireFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPPointChargeMainWireFrame.h; sourceTree = "<group>"; };
+		2DCEC2911FAC54BA001C45B4 /* NPPointChargeMainWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPPointChargeMainWireFrame.m; sourceTree = "<group>"; };
+		2DCEC2931FAC54CE001C45B4 /* NPPointChargeMainPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPPointChargeMainPresenter.h; sourceTree = "<group>"; };
+		2DCEC2941FAC54CE001C45B4 /* NPPointChargeMainPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPPointChargeMainPresenter.m; sourceTree = "<group>"; };
+		2DCEC2961FAC54D4001C45B4 /* NPPointChargeMainInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPPointChargeMainInteractor.h; sourceTree = "<group>"; };
+		2DCEC2971FAC54D4001C45B4 /* NPPointChargeMainInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPPointChargeMainInteractor.m; sourceTree = "<group>"; };
+		2DCEC2991FAC54DB001C45B4 /* NPPointChargeMainDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPPointChargeMainDataManager.h; sourceTree = "<group>"; };
+		2DCEC29A1FAC54DB001C45B4 /* NPPointChargeMainDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPPointChargeMainDataManager.m; sourceTree = "<group>"; };
+		2DCEC29C1FAC54ED001C45B4 /* NPPointChargeMainDependencyInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPPointChargeMainDependencyInjector.h; sourceTree = "<group>"; };
+		2DCEC29D1FAC54ED001C45B4 /* NPPointChargeMainDependencyInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPPointChargeMainDependencyInjector.m; sourceTree = "<group>"; };
+		2DCEC29F1FAC5503001C45B4 /* NPPointChargeMainViewProtocolDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPPointChargeMainViewProtocolDefine.h; sourceTree = "<group>"; };
+		2DCEC2A21FAC550F001C45B4 /* NPPointChargeMainWireFrameProtocolDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPPointChargeMainWireFrameProtocolDefine.h; sourceTree = "<group>"; };
+		2DCEC2A51FAC551C001C45B4 /* NPPointChargeMainPresenterProtocolDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPPointChargeMainPresenterProtocolDefine.h; sourceTree = "<group>"; };
+		2DCEC2A81FAC5529001C45B4 /* NPPointChargeMainInteractorProtocolDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPPointChargeMainInteractorProtocolDefine.h; sourceTree = "<group>"; };
+		2DCEC2AB1FAC5533001C45B4 /* NPPointChargeMainDataManagerProtocolDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPPointChargeMainDataManagerProtocolDefine.h; sourceTree = "<group>"; };
 		2DE8A72C1F80E203004B8D15 /* StudyDesignPatternTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyDesignPatternTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8A7301F80E203004B8D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8A7371F80E530004B8D15 /* addressBook.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = addressBook.json; sourceTree = "<group>"; };
@@ -110,7 +130,6 @@
 			children = (
 				2D48FC281FAB58F40029266A /* Protocols */,
 				2D48FC181FAB56650029266A /* DependencyInjector */,
-				2D48FC141FAB56030029266A /* Manager */,
 				2D48FC111FAB55A40029266A /* Interactor */,
 				2D48FC121FAB55AB0029266A /* Presenter */,
 				2D48FC101FAB559E0029266A /* View */,
@@ -122,6 +141,7 @@
 		2D48FC0C1FAB552C0029266A /* PointCharge */ = {
 			isa = PBXGroup;
 			children = (
+				2DCEC2851FAC53B6001C45B4 /* Main */,
 			);
 			name = PointCharge;
 			sourceTree = "<group>";
@@ -160,15 +180,6 @@
 				2D48FC161FAB565C0029266A /* NPMainWireFrame.m */,
 			);
 			name = WireFrame;
-			sourceTree = "<group>";
-		};
-		2D48FC141FAB56030029266A /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				2D48FC1F1FAB56870029266A /* NPMainDataManager.h */,
-				2D48FC201FAB56870029266A /* NPMainDataManager.m */,
-			);
-			name = Manager;
 			sourceTree = "<group>";
 		};
 		2D48FC181FAB56650029266A /* DependencyInjector */ = {
@@ -246,6 +257,86 @@
 			children = (
 			);
 			name = BaseClasses;
+			sourceTree = "<group>";
+		};
+		2DCEC2851FAC53B6001C45B4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2DCEC28F1FAC549F001C45B4 /* Protocols */,
+				2DCEC28E1FAC5494001C45B4 /* DependencyInjector */,
+				2DCEC28D1FAC545F001C45B4 /* Manager */,
+				2DCEC28C1FAC5459001C45B4 /* Interactor */,
+				2DCEC28B1FAC5454001C45B4 /* Presenter */,
+				2DCEC28A1FAC544F001C45B4 /* View */,
+				2DCEC2891FAC5449001C45B4 /* WireFrame */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		2DCEC2891FAC5449001C45B4 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				2DCEC2901FAC54BA001C45B4 /* NPPointChargeMainWireFrame.h */,
+				2DCEC2911FAC54BA001C45B4 /* NPPointChargeMainWireFrame.m */,
+			);
+			name = WireFrame;
+			sourceTree = "<group>";
+		};
+		2DCEC28A1FAC544F001C45B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2DCEC2861FAC5443001C45B4 /* NPPointChargeMainViewController.h */,
+				2DCEC2871FAC5443001C45B4 /* NPPointChargeMainViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2DCEC28B1FAC5454001C45B4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2DCEC2931FAC54CE001C45B4 /* NPPointChargeMainPresenter.h */,
+				2DCEC2941FAC54CE001C45B4 /* NPPointChargeMainPresenter.m */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		2DCEC28C1FAC5459001C45B4 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2DCEC2961FAC54D4001C45B4 /* NPPointChargeMainInteractor.h */,
+				2DCEC2971FAC54D4001C45B4 /* NPPointChargeMainInteractor.m */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		2DCEC28D1FAC545F001C45B4 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2DCEC2991FAC54DB001C45B4 /* NPPointChargeMainDataManager.h */,
+				2DCEC29A1FAC54DB001C45B4 /* NPPointChargeMainDataManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		2DCEC28E1FAC5494001C45B4 /* DependencyInjector */ = {
+			isa = PBXGroup;
+			children = (
+				2DCEC29C1FAC54ED001C45B4 /* NPPointChargeMainDependencyInjector.h */,
+				2DCEC29D1FAC54ED001C45B4 /* NPPointChargeMainDependencyInjector.m */,
+			);
+			name = DependencyInjector;
+			sourceTree = "<group>";
+		};
+		2DCEC28F1FAC549F001C45B4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2DCEC29F1FAC5503001C45B4 /* NPPointChargeMainViewProtocolDefine.h */,
+				2DCEC2A21FAC550F001C45B4 /* NPPointChargeMainWireFrameProtocolDefine.h */,
+				2DCEC2A51FAC551C001C45B4 /* NPPointChargeMainPresenterProtocolDefine.h */,
+				2DCEC2A81FAC5529001C45B4 /* NPPointChargeMainInteractorProtocolDefine.h */,
+				2DCEC2AB1FAC5533001C45B4 /* NPPointChargeMainDataManagerProtocolDefine.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		2DE8A72D1F80E203004B8D15 /* StudyDesignPatternTests */ = {
@@ -369,13 +460,18 @@
 			files = (
 				2D95D9091F7FDD2B0011D7AB /* AppDelegate.m in Sources */,
 				2D48FC241FAB56E70029266A /* NPMainDependencyInjector.m in Sources */,
+				2DCEC29E1FAC54ED001C45B4 /* NPPointChargeMainDependencyInjector.m in Sources */,
 				2DCEC2811FAC4B00001C45B4 /* NPWireFrameHelper.m in Sources */,
 				2D48FC171FAB565C0029266A /* NPMainWireFrame.m in Sources */,
 				2D95D9061F7FDD2B0011D7AB /* main.m in Sources */,
 				2D48FC1E1FAB567C0029266A /* NPMainInteractor.m in Sources */,
 				2D95D9231F7FE57D0011D7AB /* UIView+TUMLayout.m in Sources */,
 				2D48FC0F1FAB55990029266A /* NPMainViewController.m in Sources */,
-				2D48FC211FAB56870029266A /* NPMainDataManager.m in Sources */,
+				2DCEC2921FAC54BA001C45B4 /* NPPointChargeMainWireFrame.m in Sources */,
+				2DCEC29B1FAC54DB001C45B4 /* NPPointChargeMainDataManager.m in Sources */,
+				2DCEC2881FAC5443001C45B4 /* NPPointChargeMainViewController.m in Sources */,
+				2DCEC2951FAC54CE001C45B4 /* NPPointChargeMainPresenter.m in Sources */,
+				2DCEC2981FAC54D4001C45B4 /* NPPointChargeMainInteractor.m in Sources */,
 				2D48FC1B1FAB56740029266A /* NPMainPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

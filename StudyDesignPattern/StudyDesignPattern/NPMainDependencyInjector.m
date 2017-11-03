@@ -12,7 +12,6 @@
 #import "NPMainViewController.h"
 #import "NPMainPresenter.h"
 #import "NPMainInteractor.h"
-#import "NPMainDataManager.h"
 #import "NPMainWireFrame.h"
 
 
