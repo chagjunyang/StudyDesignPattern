@@ -6,6 +6,6 @@
 //  Copyright © 2017년 NHNENT. All rights reserved.
 //
 
-@protocol NPPointChargeMainInteractorInterface <NPCommonInteractorInterface>
+@protocol NPPointChargeMainInteractorInterface
 
 @end

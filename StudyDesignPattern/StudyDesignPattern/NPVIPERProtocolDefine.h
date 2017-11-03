@@ -11,7 +11,6 @@
 @protocol NPCommonWireFrameInterface;
 @protocol NPCommonViewInterface;
 @protocol NPCommonPresenterInterface;
-@protocol NPCommonInteractorInterface;
 
 
 #pragma mark - NPCommonDependenciesInterface
@@ -44,7 +43,7 @@
 - (void)presentViewControllerFromPresentingViewController:(UIViewController *)aController
                                       presentingWireFrame:(id<NPCommonWireFrameInterface>)aPresentingWireFrame;
 - (void)showNextWireFrame;
-- (void)dismissViewController;
+- (void)dismissViewController:(BOOL)aAnimated;
 - (void)dismissedPresentedViewController:(UIViewController *)presentedViewController
                       presentedWireFrame:(id<NPCommonWireFrameInterface>)aPresentedWireFrame;
 

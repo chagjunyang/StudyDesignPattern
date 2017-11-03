@@ -7,7 +7,10 @@
 //
 
 #import "NPPointChargeMainWireFrameProtocolDefine.h"
+#import "NPBaseWireFrame.h"
 
-@interface NPPointChargeMainWireFrame : NSObject <NPPointChargeMainWireFrameInterface>
+
+@interface NPPointChargeMainWireFrame : NPBaseWireFrame <NPPointChargeMainWireFrameInterface>
+
 
 @end

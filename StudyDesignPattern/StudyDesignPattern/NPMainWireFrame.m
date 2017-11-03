@@ -7,14 +7,6 @@
 //
 
 #import "NPMainWireFrame.h"
-#import "NPWireFrameHelper.h"
-
-
-@interface NPMainWireFrame()
-
-@property (strong, nonatomic, readonly) UIViewController *viewController;
-
-@end
 
 
 @implementation NPMainWireFrame
@@ -24,13 +16,13 @@
 
 
 - (void)presentViewControllerFromPresentingViewController:(UIViewController *)aController
-                                      presentingWireFrame:(id<NPCommonPresenterInterface>)aPresentingWireFrame
+                                      presentingWireFrame:(id<NPCommonWireFrameInterface>)aPresentingWireFrame
 {
     //nothing. beacuse main frame is root frame
 }
 
 
-- (void)dismissViewController
+- (void)dismissViewController:(BOOL)aAnimated;
 {
     //nothing. beacuse main frame is root frame
 }
@@ -51,18 +43,12 @@
 }
 
 
-- (void)showNextWireFrame
-{
-    [[NPWireFrameHelper nextWireFrameFromWireFrame:self] presentViewControllerFromPresentingViewController:self.viewController presentingWireFrame:self];
-}
-
-
 #pragma mark - NPMainWireFrameInterface
 
 
 - (void)showMainViewControllerFromWindow:(UIWindow *)aWindw
 {
-    _viewController = [NPWireFrameHelper viewControllerFromViewFromWireFrame:self];
+    self.viewController = [self viewControllerFromView];
     
     UINavigationController *sNaviController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
     
