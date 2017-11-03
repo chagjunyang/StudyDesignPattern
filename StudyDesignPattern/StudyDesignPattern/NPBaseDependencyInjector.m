@@ -17,17 +17,29 @@
 
 - (id<NPCommonWireFrameInterface>)wireFrameWithInjectedDependencies
 {
-    self.wireFrame.presenter = self.presenter;
-    self.wireFrame.view = self.view;
-    self.wireFrame.nextDependencyInjector = self.nextDependencyInjector;
+    id<NPCommonWireFrameInterface> sWireFrame = [self.wireFrame new];
+    id<NPCommonViewInterface> sView = [self.view new];
+    id<NPCommonPresenterInterface> sPresenter = [self.presenter new];
+    id<NPCommonDependencyInjectorInterface> sNextDependencyInjector = [self.nextDependencyInjector new];
+    id sInteractor = nil;
     
-    self.presenter.interactor = self.interactor;
-    self.presenter.view = self.view;
-    self.presenter.wireFrame = self.wireFrame;
+    if(self.interactor)
+    {
+       sInteractor = [self.interactor new];
+    }
     
-    self.view.presenter = self.presenter;
     
-    return self.wireFrame;
+    sWireFrame.presenter = sPresenter;
+    sWireFrame.view = sView;
+    sWireFrame.nextDependencyInjector = sNextDependencyInjector;
+    
+    sPresenter.interactor = sInteractor;
+    sPresenter.view = sView;
+    sPresenter.wireFrame = sWireFrame;
+    
+    sView.presenter = sPresenter;
+    
+    return sWireFrame;
 }
 
 

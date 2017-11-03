@@ -7,7 +7,8 @@
 //
 
 
-@protocol NPPointChargeMainViewInterfact <NPCommonViewInterface>
+@protocol NPPointChargeMainViewInterface <NPCommonViewInterface>
 
+- (void)setConfirmButtonTitle:(NSString *)aTitle;
 
 @end

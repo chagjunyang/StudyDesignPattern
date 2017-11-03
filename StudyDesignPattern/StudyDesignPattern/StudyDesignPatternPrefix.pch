@@ -6,8 +6,13 @@
 //  Copyright © 2017년 NHNENT. All rights reserved.
 //
 
+#pragma mar - system
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h> 
+
+#pragma mark - defines
 #import "NPVIPERProtocolDefine.h"
-#import "UIView+TUMLayout.h"
+
+#pragma mark - util
 #import "DeviceInfo.h"
+#import "UIView+TUMLayout.h"

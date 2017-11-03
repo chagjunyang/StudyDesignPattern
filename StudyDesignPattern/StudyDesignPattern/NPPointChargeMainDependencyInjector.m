@@ -24,10 +24,10 @@
     
     if (self)
     {
-        self.wireFrame = [NPPointChargeMainWireFrame new];
-        self.presenter = [NPPointChargeMainPresenter new];
-        self.interactor = [NPPointChargeMainInteractor new];
-        self.view = [NPPointChargeMainViewController new];
+        self.wireFrame = [NPPointChargeMainWireFrame class];
+        self.presenter = [NPPointChargeMainPresenter class];
+        self.interactor = [NPPointChargeMainInteractor class];
+        self.view = [NPPointChargeMainViewController class];
     }
     
     return self;
@@ -36,11 +36,11 @@
 
 - (id<NPCommonWireFrameInterface>)wireFrameWithInjectedDependencies
 {
-    [super wireFrameWithInjectedDependencies];
+    id<NPCommonWireFrameInterface> sResult = [super wireFrameWithInjectedDependencies];
     
-    [self.interactor setDataManager:[NPPointChargeMainDataManager new]];
+    [(NPPointChargeMainInteractor *)sResult.presenter.interactor setDataManager:[NPPointChargeMainDataManager new]];
     
-    return self.wireFrame;
+    return sResult;
 }
 
 

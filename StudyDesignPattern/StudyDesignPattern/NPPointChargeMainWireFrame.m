@@ -30,6 +30,7 @@
 - (void)dismissViewController:(BOOL)aAnimated;
 {
     [self.viewController dismissViewControllerAnimated:aAnimated completion:nil];
+    [self.prevWireFrame dismissedPresentedViewController:self.viewController presentedWireFrame:self];
 }
 
 

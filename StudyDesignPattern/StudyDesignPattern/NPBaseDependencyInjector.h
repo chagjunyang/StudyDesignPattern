@@ -12,11 +12,11 @@
 @interface NPBaseDependencyInjector : NSObject <NPCommonDependencyInjectorInterface>
 
 
-@property (strong, nonatomic, readwrite) id<NPCommonWireFrameInterface> wireFrame;
-@property (strong, nonatomic, readwrite) id<NPCommonDependencyInjectorInterface> nextDependencyInjector;
-@property (strong, nonatomic, readwrite) id<NPCommonPresenterInterface> presenter;
-@property (strong, nonatomic, readwrite) id<NPCommonViewInterface> view;
-@property (strong, nonatomic, readwrite) id interactor;
+@property (strong, nonatomic, readwrite) Class wireFrame;
+@property (strong, nonatomic, readwrite) Class nextDependencyInjector;
+@property (strong, nonatomic, readwrite) Class presenter;
+@property (strong, nonatomic, readwrite) Class view;
+@property (strong, nonatomic, readwrite) Class interactor;
 
 
 @end

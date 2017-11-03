@@ -25,11 +25,11 @@
     
     if (self)
     {
-        self.wireFrame = [NPMainWireFrame new];
-        self.presenter = [NPMainPresenter new];
-        self.view = [NPMainViewController new];
-        self.interactor = [NPMainInteractor new];
-        self.nextDependencyInjector = [NPPointChargeMainDependencyInjector new];
+        self.wireFrame = [NPMainWireFrame class];
+        self.presenter = [NPMainPresenter class];
+        self.view = [NPMainViewController class];
+        self.interactor = [NPMainInteractor class];
+        self.nextDependencyInjector = [NPPointChargeMainDependencyInjector class];
     }
     
     return self;

@@ -27,6 +27,7 @@
 		2DCEC2B61FAC88CA001C45B4 /* NPBasePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEC2B51FAC88CA001C45B4 /* NPBasePresenter.m */; };
 		2DCEC2B91FAC8A4E001C45B4 /* NPBaseDependencyInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEC2B81FAC8A4E001C45B4 /* NPBaseDependencyInjector.m */; };
 		2DCEC2BD1FAC8FA8001C45B4 /* NPPointChargeMainDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEC2BC1FAC8FA8001C45B4 /* NPPointChargeMainDataSource.m */; };
+		2DCEC2C01FAC901B001C45B4 /* NPBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEC2BF1FAC901B001C45B4 /* NPBaseCollectionViewCell.m */; };
 		2DD6C0BE1F8298CF002443C6 /* addressBook.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8A7371F80E530004B8D15 /* addressBook.json */; };
 		2DE8A7381F80E530004B8D15 /* addressBook.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8A7371F80E530004B8D15 /* addressBook.json */; };
 /* End PBXBuildFile section */
@@ -93,6 +94,8 @@
 		2DCEC2B81FAC8A4E001C45B4 /* NPBaseDependencyInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPBaseDependencyInjector.m; sourceTree = "<group>"; };
 		2DCEC2BB1FAC8FA8001C45B4 /* NPPointChargeMainDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPPointChargeMainDataSource.h; sourceTree = "<group>"; };
 		2DCEC2BC1FAC8FA8001C45B4 /* NPPointChargeMainDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPPointChargeMainDataSource.m; sourceTree = "<group>"; };
+		2DCEC2BE1FAC901B001C45B4 /* NPBaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPBaseCollectionViewCell.h; sourceTree = "<group>"; };
+		2DCEC2BF1FAC901B001C45B4 /* NPBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPBaseCollectionViewCell.m; sourceTree = "<group>"; };
 		2DE8A72C1F80E203004B8D15 /* StudyDesignPatternTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyDesignPatternTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8A7301F80E203004B8D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8A7371F80E530004B8D15 /* addressBook.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = addressBook.json; sourceTree = "<group>"; };
@@ -273,6 +276,8 @@
 				2DCEC2B51FAC88CA001C45B4 /* NPBasePresenter.m */,
 				2DCEC2B71FAC8A4E001C45B4 /* NPBaseDependencyInjector.h */,
 				2DCEC2B81FAC8A4E001C45B4 /* NPBaseDependencyInjector.m */,
+				2DCEC2BE1FAC901B001C45B4 /* NPBaseCollectionViewCell.h */,
+				2DCEC2BF1FAC901B001C45B4 /* NPBaseCollectionViewCell.m */,
 			);
 			name = BaseClasses;
 			sourceTree = "<group>";
@@ -495,6 +500,7 @@
 				2DCEC2881FAC5443001C45B4 /* NPPointChargeMainViewController.m in Sources */,
 				2DCEC2951FAC54CE001C45B4 /* NPPointChargeMainPresenter.m in Sources */,
 				2DCEC2981FAC54D4001C45B4 /* NPPointChargeMainInteractor.m in Sources */,
+				2DCEC2C01FAC901B001C45B4 /* NPBaseCollectionViewCell.m in Sources */,
 				2D48FC1B1FAB56740029266A /* NPMainPresenter.m in Sources */,
 				2DCEC2B91FAC8A4E001C45B4 /* NPBaseDependencyInjector.m in Sources */,
 			);

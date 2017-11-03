@@ -15,7 +15,7 @@
 @property (strong, nonatomic, readwrite) id<NPCommonPresenterInterface> presenter;
 
 @property (strong, nonatomic, readwrite) id<NPCommonDependencyInjectorInterface> nextDependencyInjector;
-@property (weak, nonatomic, readwrite) id<NPCommonWireFrameInterface> nextWireFrame;
+@property (strong, nonatomic, readwrite) id<NPCommonWireFrameInterface> nextWireFrame;
 
 @property (weak, nonatomic, readonly) id<NPCommonWireFrameInterface> prevWireFrame;
 @property (weak, nonatomic, readonly) UIViewController *prevContext;

@@ -7,10 +7,11 @@
 //
 
 #import "NPPointChargeMainViewProtocolDefine.h"
+#import "NPPointChargeMainPresenterProtocolDefine.h"
 
 
-@interface NPPointChargeMainViewController : UIViewController <NPPointChargeMainViewInterfact>
+@interface NPPointChargeMainViewController : UIViewController <NPPointChargeMainViewInterface>
 
-@property (weak, nonatomic, readwrite) id<NPCommonPresenterInterface> presenter;
+@property (weak, nonatomic, readwrite) id<NPPointChargeMainPresenterInterface> presenter;
 
 @end

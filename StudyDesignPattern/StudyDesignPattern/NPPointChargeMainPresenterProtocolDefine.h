@@ -9,4 +9,7 @@
 @protocol NPPointChargeMainPresenterInterface <NPCommonPresenterInterface>
 
 
+- (void)tappedConfirmButton:(id)aSender;
+
+
 @end
