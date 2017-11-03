@@ -64,7 +64,9 @@
 {
     _viewController = [NPWireFrameHelper viewControllerFromViewFromWireFrame:self];
     
-    [aWindw setRootViewController:self.viewController];
+    UINavigationController *sNaviController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    
+    [aWindw setRootViewController:sNaviController];
 }
 
 
