@@ -9,6 +9,6 @@
 #import "NPBaseDependencyInjector.h"
 
 
-@interface NPPointChargeMainDependencyInjector : NPBaseDependencyInjector <NPCommonDependencyInjectorInterface>
+@interface NPPointChargeMainDependencyInjector : NPBaseDependencyInjector 
 
 @end

@@ -26,7 +26,7 @@
     
     [self setupChargeButton];
     
-    [self.presenter updateView];
+    [self.presenter updateViewWithCompletion:nil];
 }
 
 

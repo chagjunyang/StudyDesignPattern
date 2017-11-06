@@ -30,7 +30,7 @@
     [self setupCollectionView];
     [self setupConfirmButton];
     
-    [self.presenter updateView];
+    [self.presenter updateViewWithCompletion:nil];
 }
 
 

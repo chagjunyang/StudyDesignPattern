@@ -8,4 +8,6 @@
 
 @protocol NPPointChargeMainInteractorInterface
 
+- (BOOL)isNeedToPopupFromUserDefaults;
+
 @end

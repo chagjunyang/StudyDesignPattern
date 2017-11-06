@@ -80,7 +80,7 @@
 @property (strong, nonatomic, readwrite) id interactor;
 
 @required
-- (void)updateView;
+- (void)updateViewWithCompletion:(dispatch_block_t)aCompletion;
 
 @end
 

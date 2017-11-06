@@ -20,12 +20,16 @@
 @implementation NPPointChargeMainPresenter
 
 
-- (void)updateView
+- (void)updateViewWithCompletion:(dispatch_block_t)aCompletion
 {
     _mainView = (id<NPPointChargeMainViewInterface>)self.view;
     
     [self.mainView setConfirmButtonTitle:@"확인"];
     
+    if(aCompletion)
+    {
+        aCompletion();
+    }
 }
 
 

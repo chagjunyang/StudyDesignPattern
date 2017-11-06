@@ -11,4 +11,11 @@
 
 @implementation NPPointChargeMainInteractor
 
+
+- (BOOL)isNeedToPopupFromUserDefaults
+{
+    return YES;
+}
+
+
 @end

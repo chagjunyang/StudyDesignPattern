@@ -12,10 +12,14 @@
 @implementation NPMainPresenter
 
 
-- (void)updateView
+- (void)updateViewWithCompletion:(dispatch_block_t)aCompletion
 {
     [self.interactor fetchTitleWithCompletion:^(NSString *aTitle) {
         [self.view setPointChargeButtonTitle:aTitle];
+        if(aCompletion)
+        {
+            aCompletion();
+        }
     }];
 }
 

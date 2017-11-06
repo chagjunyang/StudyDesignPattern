@@ -7,6 +7,18 @@
 //
 
 #import "NPPointChargeMainWireFrame.h"
+#import "NPPointChargeMainInteractorProtocolDefine.h"
+
+#pragma mark - popup
+#import "NPPointChargePopupProtocolDefine.h"
+#import "NPPointChargePopupDependencyInjector.h"
+
+
+@interface NPPointChargeMainWireFrame()
+
+@property (strong, nonatomic, readonly) id<NPCommonWireFrameInterface> popupWireFrame;
+
+@end
 
 
 @implementation NPPointChargeMainWireFrame
@@ -20,16 +32,24 @@
 {
     [super presentViewControllerFromPresentingViewController:aController presentingWireFrame:aPresentingWireFrame];
     
-    if(self.viewController)
+    if([self needToShowingPoupView])
     {
-        [aController presentViewController:self.viewController animated:YES completion:nil];
+        [self initPopupWireFrame];
+        
+        [self.popupWireFrame presentViewControllerFromPresentingViewController:aController presentingWireFrame:self];
+    }
+    else
+    {
+        if(self.viewController)
+        {
+            [aController presentViewController:self.viewController animated:YES completion:nil];
+        }
     }
 }
 
 
 - (void)dismissViewController:(BOOL)aAnimated;
 {
-    [self.viewController dismissViewControllerAnimated:aAnimated completion:nil];
     [self.prevWireFrame dismissedPresentedViewController:self.viewController presentedWireFrame:self];
 }
 
@@ -37,12 +57,40 @@
 - (void)dismissedPresentedViewController:(UIViewController *)presentedViewController
                       presentedWireFrame:(id<NPCommonWireFrameInterface>)aPresentedWireFrame
 {
-    [super dismissedPresentedViewController:presentedViewController presentedWireFrame:aPresentedWireFrame];
-    
-    if([self.viewController presentedViewController])
+    if([aPresentedWireFrame isEqual:self.popupWireFrame])
     {
-        [self.viewController dismissViewControllerAnimated:YES completion:nil];
+        [presentedViewController presentViewController:self.viewController animated:YES completion:^{
+            _popupWireFrame = nil;
+        }];
     }
+    else
+    {
+        [super dismissedPresentedViewController:presentedViewController presentedWireFrame:aPresentedWireFrame];
+        
+        if([self.viewController presentedViewController])
+        {
+            [self.viewController dismissViewControllerAnimated:YES completion:nil];
+        }
+    }
+}
+
+
+#pragma mark - Private
+
+
+- (BOOL)needToShowingPoupView
+{
+    id<NPPointChargeMainInteractorInterface> sInteractor = self.presenter.interactor;
+    
+    return [sInteractor isNeedToPopupFromUserDefaults];
+}
+
+
+- (void)initPopupWireFrame
+{
+    NPPointChargePopupDependencyInjector *sInjector = [NPPointChargePopupDependencyInjector new];
+    
+    _popupWireFrame = [sInjector wireFrameWithInjectedDependencies];
 }
 
 
