@@ -12,7 +12,7 @@
 @implementation NPBasePresenter
 
 
-- (void)updateView
+- (void)updateViewWithCompletion:(dispatch_block_t)aCompletion
 {
     //nothing
 }
